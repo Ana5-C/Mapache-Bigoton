@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import ClienteService from '../services/ClienteService';
+import { Link } from 'react-router-dom';
 
 export default function ListaPersonasComponents(){
     const [clientes, setClientes] = useState([]);
@@ -15,7 +16,8 @@ export default function ListaPersonasComponents(){
 
     return (
         <div className='container'>
-            <h2 className='text-center'>Clientes Registrados</h2>
+            <h2 className='text-center'>Inicio de Sesión</h2>
+            <Link to='/registro' className='btn btn-primary mb-2'>Registrar</Link>
             <table className='table table-borderd table-striped'>
                 <thead>
                     <th>Id</th>

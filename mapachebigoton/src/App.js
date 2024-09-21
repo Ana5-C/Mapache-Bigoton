@@ -1,15 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
 import HeadComponent from './components/HeadComponent';
-import ListaPersonasComponents from './components/ListaPersonasComponent';
+import ListaPersonasComponent from './components/ListaPersonasComponent';
 import FootComponent from './components/FootComponent';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import RegistroComponent from './components/RegistroComponent';
 
 function App() {
   return (
     <div>
-      <HeadComponent />
-      <ListaPersonasComponents />
-      <FootComponent />
+      <BrowserRouter>
+        <HeadComponent />
+        <div className='container'>
+          <Routes>
+            <Route path='/clientes' element={<ListaPersonasComponent />}></Route>
+            <Route path='/registro' element={<RegistroComponent />}></Route>
+          </Routes>
+        </div>
+        <FootComponent />
+      </BrowserRouter>
     </div>
   );
 }
