@@ -1,38 +1,69 @@
-.App {
+body {
+  background-color: #81c583;
+  color: rgba(117, 66, 8, 0.904);
+}
+
+.container {
+  background-color: #81c583;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #81c583;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.container h2 {
+  margin-bottom: 40px;
+  font-size: 50px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-group {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 10px 0;
+}
+
+.form-label {
+  width: 150px;
+  margin-right: 20px;
+  text-align: right;
+  color: black;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 48%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-success {
+  background-color: #28a745;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-link {
+  margin-top: 10px;
+  display: block;
+  color: rgba(117, 66, 8, 0.904);
+  text-decoration: underline;
 }
