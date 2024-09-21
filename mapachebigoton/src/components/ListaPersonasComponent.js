@@ -1,7 +1,17 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
+import ClienteService from '../services/ClienteService';
 
 export default function ListaPersonasComponents(){
     const [clientes, setClientes] = useState([]);
+
+    useEffect(() =>{
+        ClienteService.findAll().then(response =>{
+            setClientes(response.data);
+            console.log(response.data);
+        }).catch(error =>{
+            console.log(error);
+        })
+    },[])
 
     return (
         <div className='container'>
@@ -23,7 +33,7 @@ export default function ListaPersonasComponents(){
                                     <td>{cliente.nombre}</td>
                                     <td>{cliente.telefono}</td>
                                     <td>{cliente.nombreUsuario}</td>
-                                    <td>{cliente.contraseña}</td>
+                                    <td>{cliente.contrasena}</td>
                                 </tr>
                         )
                     }
