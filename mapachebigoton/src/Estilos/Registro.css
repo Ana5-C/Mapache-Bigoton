@@ -1,0 +1,82 @@
+.container {
+    background-color: #81c583;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #81c583;
+    width: 800px;
+    display: flex;
+    align-items: center;
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.container h2 {
+    margin-bottom: 40px;
+    font-size: 50px;
+}
+
+.card-body {
+    width: 10%;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.form-label {
+    width: 300px;
+    margin-right: 20px;
+    text-align: right;
+    color: black;
+}
+.form-container input[type="text"], .form-container input[type="password"], .form-container input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-control {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 48%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.login-link {
+    margin-top: 10px;
+    display: block;
+    color: rgba(117, 66, 8, 0.904);
+    text-decoration: underline;
+}

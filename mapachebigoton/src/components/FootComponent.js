@@ -3,7 +3,6 @@ export default function FootComponent(){
         <div>
             <footer className='footer'>
                 <span className='text-muted'>
-                    BARBERIA MAPACHE BIGOTÓN
                 </span>
             </footer>
         </div>

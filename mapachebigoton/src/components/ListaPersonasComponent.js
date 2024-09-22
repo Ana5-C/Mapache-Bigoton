@@ -15,7 +15,7 @@ export default function ListaPersonasComponents(){
     },[])
 
     return (
-        <div className='container'>
+        <div className='containerInicio'>
             <h2 className='text-center'>Inicio de Sesión</h2>
             <Link to='/registro' className='btn btn-primary mb-2'>Registrar</Link>
             <table className='table table-borderd table-striped'>
