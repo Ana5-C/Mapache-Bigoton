@@ -1,4 +1,85 @@
 body {
   background-color: #81c583;
   color: rgba(117, 66, 8, 0.904);
+  
+}
+
+.container {
+  background-color: #81c583;
+  padding: 0px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #81c583;
+  width: 900px;
+  display: flex;
+}
+.image-container {
+  flex: 1;
+  background-image: url('mapache.png');
+  background-size: 140%; 
+  background-position: center;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.form-container {
+  flex: 1;
+}
+.container h2 {
+  margin-bottom: 10px;
+  font-size: 60px;
+  text-align: center;
+}
+
+.card-body {
+  width: 120%;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.form-label {
+  width: 150px;
+  margin-right: 20px;
+  text-align: right;
+  color: black;
+}
+
+.form-control {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 48%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.login-link {
+  margin-top: 10px;
+  display: block;
+  color: rgba(117, 66, 8, 0.904);
+  text-decoration: underline;
+  text-align: center;
+}
+.is-invalid {
+  border-color: red;
 }

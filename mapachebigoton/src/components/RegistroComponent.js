@@ -8,26 +8,30 @@ export const RegistroComponent = () => {
     const [nombreUsuario, setNombreUsuario] = useState('');
     const [contrasena, setContrasena] = useState('');
     const navigate = useNavigate();
+    const [error, setError] = useState(null);
 
     const createCliente = (e) => {
         e.preventDefault();
-        const cliente = { nombre, telefono, nombreUsuario, contrasena };
-        ClienteService.create(cliente).then((response) => {
-            console.log(response.data);
-            navigate('/clientes');
-        }).catch(error => {
-            console.log(error)
-        });
+        if (!nombre || !telefono || !nombreUsuario || !contrasena) {
+            setError('Por favor, complete todos los campos obligatorios');
+        } else {
+            const cliente = { nombre, telefono, nombreUsuario, contrasena };
+            ClienteService.create(cliente).then((response) => {
+                console.log(response.data);
+                navigate('/clientes');
+            }).catch(error => {
+                console.log(error);
+                setError('Error al registrar el cliente');
+            });
+        }
     }
 
     return (
         <div>
             <div className='container'>
-                <div className='image-container'>
-                    <img src='https://www.ngenespanol.com/wp-content/uploads/2024/04/estos-son-algunos-de-los-datos-mas-curiosos-sobre-los-mapaches-1280x720.jpg' alt='Descripción de la imagen' />
-                </div>
+                <div className='image-container'/>
                 <div className='form-container'>
-                    <h2>Registro</h2>
+                    <h2>Registrarse</h2>
                     <div className='card-body'>
                         <form>
                             <div className='form-group'>
@@ -46,7 +50,7 @@ export const RegistroComponent = () => {
                                 <input
                                     type='text'
                                     placeholder='Ingrese el nombre'
-                                    name='nombre'
+                                    name='telefono'
                                     className='form-control'
                                     value={telefono}
                                     onChange={(e) => setTelefono(e.target.value)}
@@ -57,7 +61,7 @@ export const RegistroComponent = () => {
                                 <input
                                     type='text'
                                     placeholder='Ingrese el nombre'
-                                    name='nombre'
+                                    name='nombreUsuario'
                                     className='form-control'
                                     value={nombreUsuario}
                                     onChange={(e) => setNombreUsuario(e.target.value)}
@@ -66,22 +70,27 @@ export const RegistroComponent = () => {
                             <div className='form-group'>
                                 <label className='form-label'>Contraseña</label>
                                 <input
-                                    type='text'
-                                    placeholder='Ingrese el nombre'
-                                    name='nombre'
+                                    type='password'
+                                    placeholder='Ingrese la contraseña'
+                                    name='contraseña'
                                     className='form-control'
                                     value={contrasena}
                                     onChange={(e) => setContrasena(e.target.value)}
                                 />
                             </div>
-                            <button className='btn btn-success' onClick={(e) => createCliente(e)}>Guardar</button>
+                            {error && (
+                                <div className='alert alert-danger'>
+                                    {error}
+                                </div>
+                            )}
+                            <button className='btn btn-success' onClick={(e) => createCliente(e)}>Registrar</button>
                             &nbsp;&nbsp;
                             <Link to='/clientes' className='btn btn-danger'>Cancelar</Link>
                         </form>
-                        <a href="InicioSesion.html" class="login-link">¿Ya tienes una cuenta? Inicia Sesión</a>
+                        <a href="/clientes" class="login-link">¿Ya tienes una cuenta? Inicia Sesión</a>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     )
 }
