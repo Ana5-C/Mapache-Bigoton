@@ -1,25 +1,37 @@
 body {
   background-color: #81c583;
   color: rgba(117, 66, 8, 0.904);
+  
 }
 
 .container {
   background-color: #81c583;
-  padding: 50px;
-  border-radius: 10px;
+  padding: 0px;
+  border-radius: 30px;
   box-shadow: 0 0 10px #81c583;
-  width: 800px;
+  width: 900px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  
+}
+.image-container {
+  flex: 1;
+  background-image: url('mapache.png');
+  background-size: 140%; 
+  background-position: center;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.form-container {
+  flex: 1;
 }
 .container h2 {
-  margin-bottom: 40px;
-  font-size: 50px;
+  margin-bottom: 10px;
+  font-size: 60px;
   text-align: center;
 }
 
+.card-body {
+  width: 120%;
+}
 
 .form-group {
   display: flex;
@@ -35,7 +47,7 @@ body {
 }
 
 .form-control {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
@@ -66,4 +78,8 @@ body {
   display: block;
   color: rgba(117, 66, 8, 0.904);
   text-decoration: underline;
+  text-align: center;
+}
+.is-invalid {
+  border-color: red;
 }
