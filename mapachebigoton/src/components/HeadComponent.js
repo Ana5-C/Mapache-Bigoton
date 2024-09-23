@@ -8,7 +8,7 @@ export default function HeadComponent(){
                         <a href='/servicios' className='navbar-brand'> Servicios</a>
                         <a href='/citas' className='navbar-brand'> Citas</a>
                         <a href='/ubicación' className='navbar-brand'>Ubicación</a>
-                        <a href='/clientes' className='navbar-brand'> Clientes</a>
+                        <a href='/iniciosesion' className='navbar-brand'> Clientes</a>
                     </div>
                 </nav>
             </header>

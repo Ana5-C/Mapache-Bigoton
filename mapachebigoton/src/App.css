@@ -85,20 +85,62 @@ body {
 }
 
 /* ListaPersonasComponent */
-.imag-container {
+.containerInicio {
+  background-color: #81c583;
+  padding: 80px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #81c583;
+  width: 950px;
+  display: flex;
+}
+.im-container {
   flex: 1;
   background-image: url('mapache.png');
-  background-size: 140%; 
-  background-position: center;
+  background-size: 100%; 
+  background-position: right;
   border-radius: 10px;
-  margin-right: 20px;
-}
-.btn-primary{
-  background-color: #28a745;
-  color: white;
+  margin-right: 5px;
 }
 
-.btn-danger {
-  background-color: #dc3545;
-  color: white;
+.form-containerInicio {
+  flex: 1;
+}
+.container h2 {
+  margin-bottom: 10px;
+  font-size: 65px;
+  text-align: left;
+}
+
+.card-bodyInicio {
+  width: 95%;
+}
+
+.form-groupInicio {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.form-labelInicio {
+  width: 150px;
+  margin-right: 20px;
+  text-align: right;
+  color: black;
+}
+
+.form-controlInicio {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 48%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

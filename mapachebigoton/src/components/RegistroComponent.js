@@ -18,7 +18,7 @@ export const RegistroComponent = () => {
             const cliente = { nombre, telefono, nombreUsuario, contrasena };
             ClienteService.create(cliente).then((response) => {
                 console.log(response.data);
-                navigate('/clientes');
+                navigate('/iniciosesion');
             }).catch(error => {
                 console.log(error);
                 setError('Error al registrar el cliente');
@@ -29,7 +29,7 @@ export const RegistroComponent = () => {
     return (
         <div>
             <div className='container'>
-                <div className='image-container'/>
+                <div className='image-container' />
                 <div className='form-container'>
                     <h2>Registrarse</h2>
                     <div className='card-body'>
@@ -87,10 +87,10 @@ export const RegistroComponent = () => {
                             &nbsp;&nbsp;
                             <Link to='/' className='btn btn-danger'>Cancelar</Link>
                         </form>
-                        <a href="/clientes" class="login-link">¿Ya tienes una cuenta? Inicia Sesión</a>
+                        <a href="/iniciosesion" class="login-link">¿Ya tienes una cuenta? Inicia Sesión</a>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
     )
 }
