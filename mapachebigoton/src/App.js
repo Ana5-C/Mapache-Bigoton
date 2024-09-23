@@ -13,7 +13,7 @@ function App() {
         <HeadComponent />
         <div className='container'>
           <Routes>
-            <Route path='/clientes' element={<ListaPersonasComponent />}></Route>
+            <Route path='/iniciosesion' element={<ListaPersonasComponent />}></Route>
             <Route path='/registro' element={<RegistroComponent />}></Route>
           </Routes>
         </div>

@@ -18,7 +18,7 @@ export const RegistroComponent = () => {
             const cliente = { nombre, telefono, nombreUsuario, contrasena };
             ClienteService.create(cliente).then((response) => {
                 console.log(response.data);
-                navigate('/clientes');
+                navigate('/iniciosesion');
             }).catch(error => {
                 console.log(error);
                 setError('Error al registrar el cliente');
@@ -29,7 +29,7 @@ export const RegistroComponent = () => {
     return (
         <div>
             <div className='container'>
-                <div className='image-container'/>
+                <div className='image-container' />
                 <div className='form-container'>
                     <h2>Registrarse</h2>
                     <div className='card-body'>
@@ -49,7 +49,7 @@ export const RegistroComponent = () => {
                                 <label className='form-label'>Telefono</label>
                                 <input
                                     type='text'
-                                    placeholder='Ingrese el nombre'
+                                    placeholder='Ingrese su número de telefono'
                                     name='telefono'
                                     className='form-control'
                                     value={telefono}
@@ -60,7 +60,7 @@ export const RegistroComponent = () => {
                                 <label className='form-label'>Nombre de usuario</label>
                                 <input
                                     type='text'
-                                    placeholder='Ingrese el nombre'
+                                    placeholder='Ingrese el nombre de usuario'
                                     name='nombreUsuario'
                                     className='form-control'
                                     value={nombreUsuario}
@@ -85,12 +85,12 @@ export const RegistroComponent = () => {
                             )}
                             <button className='btn btn-success' onClick={(e) => createCliente(e)}>Registrar</button>
                             &nbsp;&nbsp;
-                            <Link to='/clientes' className='btn btn-danger'>Cancelar</Link>
+                            <Link to='/' className='btn btn-danger'>Cancelar</Link>
                         </form>
-                        <a href="/clientes" class="login-link">¿Ya tienes una cuenta? Inicia Sesión</a>
+                        <a href="/iniciosesion" class="login-link">¿Ya tienes una cuenta? Inicia Sesión</a>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
     )
 }

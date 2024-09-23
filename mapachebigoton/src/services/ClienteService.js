@@ -15,7 +15,11 @@ class ClienteService{
 
     update(idCliente, cliente){
         return axios.put(URL_BASE+'/'+idCliente,cliente);
+        
     }
+    login(nombreUsuario, contrasena) {
+        return axios.post(`${URL_BASE}/login`, { nombreUsuario, contrasena });
+      }
 }
 
 export default new ClienteService();
