@@ -1,6 +1,6 @@
 import './App.css';
 import HeadComponent from './components/HeadComponent';
-import ListaPersonasComponent from './components/ListaPersonasComponent';
+import ListaPersonasComponent from './components/InicioSesionComponent';
 import FootComponent from './components/FootComponent';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
