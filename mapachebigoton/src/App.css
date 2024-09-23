@@ -83,3 +83,22 @@ body {
 .is-invalid {
   border-color: red;
 }
+
+/* ListaPersonasComponent */
+.imag-container {
+  flex: 1;
+  background-image: url('mapache.png');
+  background-size: 140%; 
+  background-position: center;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.btn-primary{
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}

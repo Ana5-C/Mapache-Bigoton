@@ -49,7 +49,7 @@ export const RegistroComponent = () => {
                                 <label className='form-label'>Telefono</label>
                                 <input
                                     type='text'
-                                    placeholder='Ingrese el nombre'
+                                    placeholder='Ingrese su número de telefono'
                                     name='telefono'
                                     className='form-control'
                                     value={telefono}
@@ -60,7 +60,7 @@ export const RegistroComponent = () => {
                                 <label className='form-label'>Nombre de usuario</label>
                                 <input
                                     type='text'
-                                    placeholder='Ingrese el nombre'
+                                    placeholder='Ingrese el nombre de usuario'
                                     name='nombreUsuario'
                                     className='form-control'
                                     value={nombreUsuario}
@@ -85,7 +85,7 @@ export const RegistroComponent = () => {
                             )}
                             <button className='btn btn-success' onClick={(e) => createCliente(e)}>Registrar</button>
                             &nbsp;&nbsp;
-                            <Link to='/clientes' className='btn btn-danger'>Cancelar</Link>
+                            <Link to='/' className='btn btn-danger'>Cancelar</Link>
                         </form>
                         <a href="/clientes" class="login-link">¿Ya tienes una cuenta? Inicia Sesión</a>
                     </div>
