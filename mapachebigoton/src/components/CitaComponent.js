@@ -8,7 +8,7 @@ export const AgendarCitaComponent = () => {
     const [nombre, setNombre] = useState('');
     const [telefono, setTelefono] = useState('');
     const [fecha, setFecha] = useState('');
-    const [hora, setHora] = useState('3:00');
+    const [hora, setHora] = useState('00:00');
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 
