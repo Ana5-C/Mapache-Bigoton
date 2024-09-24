@@ -1,4 +1,4 @@
-export default function HeadComponent(){
+/*export default function HeadComponent(){
     return(
         <div>
             <header>
@@ -14,4 +14,4 @@ export default function HeadComponent(){
             </header>
         </div>
     )
-}
+}*/
