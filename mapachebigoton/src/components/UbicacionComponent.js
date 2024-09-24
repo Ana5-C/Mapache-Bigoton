@@ -5,7 +5,7 @@ export default function UbicacionComponent() {
     return (
         <div className='containerUbicacion'>
             <header>
-                <img src="https://images.app.goo.gl/7KfopC3jCzw2V3B58" alt="Logo" className="logo" />
+                <img src="./imagen/mapache.png" alt="Logo" className="logo" />
                 <button className="logout-btn"><Link to="/">Cerrar Sesión</Link></button>
             </header>
             <main>
