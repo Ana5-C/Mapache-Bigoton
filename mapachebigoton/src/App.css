@@ -160,23 +160,34 @@ body {
 }
 
 header {
+  display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+    width: 100%;
   text-align: center;
   color: rgba(117, 66, 8, 0.904);
   font-size: 4em;
   font-weight: bold;
+  font-style: italic;
   margin-top: 20px;
 }
 
 main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   width: 100%;
   max-width: 1200px;
 }
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
-.img-container {
+.img-container{
   flex: 1;
   background-image: url('mapache.png');
   display: flex;
@@ -184,8 +195,6 @@ main {
 }
 
 .img-container img {
-  background-image: url('mapache.png');
-
   width: 80%; /* Ajusta el tamaño de la imagen */
   border-radius: 20px;
 }
@@ -204,6 +213,7 @@ nav ul {
   margin: 0;
   display: flex;
   gap: 15px;
+  margin-bottom: 20px;
 }
 
 nav ul li a {
@@ -230,6 +240,17 @@ nav ul li a {
   font-size: 1.2em;
   cursor: pointer;
 }
+header i {
+  font-size: 1em; /* Disminuye el tamaño de la fuente */
+  font-weight: bold; /* Mantiene el texto en negrita */
+  font-style: italic; /* Mantiene el texto en cursiva */
+  margin-top: 20px; /* Agrega margen superior para separación */
+  color: rgba(117, 66, 8, 0.904); /* Color del texto */
+  text-align: center;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
 
 /*UbicacionComponent*/
 body {
@@ -237,13 +258,20 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.containerPrincipal {
+.containerUbicacion {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
 }
 
 header {
@@ -257,6 +285,23 @@ header {
   font-size: 4em;
   font-weight: bold;
   margin-top: 20px;
+  position: relative; /* Necesario para la posición absoluta del logo */
+}
+
+.logo {
+  width: 100px; /* Ajusta el tamaño del logo */
+  position: fixed;
+  top: 10px;
+  left: 10px;
+
+}
+
+i {
+  font-size: 3em; /* Aumenta el tamaño de la fuente */
+  font-weight: bold; /* Aplica negrita */
+  font-style: italic; /* Aplica cursiva */
+  margin-top: 20px; /* Agrega margen superior para separación */
+  color: rgba(117, 66, 8, 0.904); /* Color del texto */
 }
 
 .logout-btn {
@@ -268,21 +313,22 @@ header {
   cursor: pointer;
   white-space: nowrap;
   text-align: left;
-  position: absolute; /* Posiciona el botón de manera absoluta */
+  position: fixed; /* Posiciona el botón de manera absoluta */
   top: 10px; /* Ajusta la distancia desde la parte superior */
   right: 10px;
 }
 
 main {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   width: 100%;
   max-width: 1200px;
 }
 
-.img-container {
+.img-containerUbicacion {
   flex: 1;
   background-image: url('mapache.png');
   display: flex;
@@ -290,11 +336,11 @@ main {
 }
 
 .img-container img {
-  width: 80%; /* Ajusta el tamaño de la imagen */
+  width: 40%; /* Ajusta el tamaño de la imagen */
   border-radius: 20px;
 }
 
-.form-containerPrincipal {
+.form-containerUbicacion {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -308,6 +354,7 @@ nav ul {
   margin: 0;
   display: flex;
   gap: 15px;
+  margin-bottom: 80px;
 }
 
 nav ul li a {
@@ -318,11 +365,16 @@ nav ul li a {
   background-color: white;
   font-weight: bold;
   font-size: 1.2em;
+  text-align: center;
 }
 
 .info {
-  margin-top: 20px;
+  margin-top: 40px;
   text-align: center;
+  font-style: italic; /* Cursiva */
+  font-weight: bold; /* Negrita */
+  font-size: 1.5em;
+  color: #06434b;
 }
 
 .buttons {
