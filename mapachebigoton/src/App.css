@@ -3,7 +3,7 @@ body {
   color: rgba(117, 66, 8, 0.904);
   
 }
-
+/* Registro */
 .container {
   background-color: #81c583;
   padding: 0px;
@@ -84,7 +84,7 @@ body {
   border-color: red;
 }
 
-/* ListaPersonasComponent */
+/* Iniciar Sesión */
 .containerInicio {
   background-color: #81c583;
   padding: 80px;
@@ -144,3 +144,210 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* PrincipalComponent */
+.containerPrincipal {
+  width: 900px; 
+  padding: 0px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #81c583;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #81c583;
+   /* Agrega display flex para que los elementos se ajusten horizontalmente */
+  flex-wrap: wrap;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header i {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.img-container {
+  width: 300px; 
+  height: 500px; 
+  background-image: url('mapache.png');
+  background-size: cover;
+  background-position: center;
+  margin: 20px;
+  float: left;
+}
+
+.form-containerPrincipal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  margin-left: 200px; /* Agrega un margen izquierdo para separar la imagen del formulario */
+  max-width: 400px;
+}
+
+nav{
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgba(117, 66, 8, 0.904);
+  border: 2px solid rgba(117, 66, 8, 0.904);
+  padding: 10px 20px;
+  background-color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.register-btn, .inicio-sesion-btn {
+  background-color: #d4a017; 
+  color: white;
+  padding: 10px 20px;
+  border: 3px solid black;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+/* Citas */
+.containerCitas {
+  background-color: #81c583;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #81c583;
+  width: 900px;
+}
+.nav-menuCitas{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(117, 66, 8, 0.904);
+  
+}
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgba(117, 66, 8, 0.904);
+  border: 2px solid rgba(117, 66, 8, 0.904);
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.logoutCitas {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.image-containerCitas {
+  flex: 1;
+  background-image: url('mapache.png');
+  background-size: cover; 
+  background-position: center;
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+.form-containerCitas {
+  padding: 20px;
+  overflow: hidden; 
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-columnCitas {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.form-groupCitas {
+  margin-bottom: 20px;
+}
+
+.form-groupCitas label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-groupCitas input, .form-groupCitas select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-groupCitas input[type="text"], .form-groupCitas input[type="tel"] {
+  height: 40px;
+}
+
+.form-groupCitas select {
+  height: 40px;
+  padding: 10px;
+}
+
+.alert {
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  width: 48%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
