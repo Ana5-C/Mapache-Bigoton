@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import CitaService from '../services/CitaService'; // Importa el servicio de citas
+import CitaService from '../services/CitaService'; 
 
 export const AgendarCitaComponent = () => {
     const [descripcion, setDescripcion] = useState('Corte');
-    const [costo, setCosto] = useState('100'); // Inicializa el costo para 'Corte'
+    const [costo, setCosto] = useState('100'); 
     const [nombre, setNombre] = useState('');
     const [telefono, setTelefono] = useState('');
     const [fecha, setFecha] = useState('');
@@ -12,7 +12,6 @@ export const AgendarCitaComponent = () => {
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 
-    // Objeto que mapea descripciones a costos
     const costos = {
         'Corte': '100',
         'Tratamiento Facial': '150',
@@ -22,7 +21,7 @@ export const AgendarCitaComponent = () => {
     const handleDescripcionChange = (e) => {
         const nuevaDescripcion = e.target.value;
         setDescripcion(nuevaDescripcion);
-        setCosto(costos[nuevaDescripcion]); // Actualiza el costo según la descripción
+        setCosto(costos[nuevaDescripcion]);
     };
 
     const createCita = (e) => {
@@ -34,7 +33,7 @@ export const AgendarCitaComponent = () => {
             CitaService.create(cita)
                 .then((response) => {
                     console.log(response.data);
-                    navigate('/'); // Redirige al inicio u otra página
+                    navigate('/'); 
                 })
                 .catch((error) => {
                     console.log(error);
