@@ -1,17 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
-export default function MapacheBigotonComponent() {
+export default function UbicacionComponent() {
     return (
         <div className='containerPrincipal'>
             <header>
-                <i>Mapache Bigotón</i>
+                
+                <button className="logout-btn"><Link to="/">Cerrar Sesión</Link></button>
             </header>
             <main>
-                <div className='img-container'>
-                <img src='imagen/mapache.png' alt="Mapache Bigotón" />
-                </div>
                 <div className='form-containerPrincipal'>
                     <nav>
                         <ul>
@@ -21,12 +18,19 @@ export default function MapacheBigotonComponent() {
                             <li><Link to="/ubicacion">Ubicación</Link></li>
                         </ul>
                     </nav>
-                    <div className="buttons">
-                        <Link to="/registro"><button className="register-btn">Registrarse</button></Link>
-                        <Link to="/iniciosesion"><button className="inicio-sesion-btn">Iniciar Sesión</button></Link>
+                    
+                    <i>Barbería El Mapache Bigotón</i>
+
+
+                    <div className="info">
+                        <p>Nos ubicamos en:</p>
+                            <p>Av. Hidalgo No.118 en Teziutlán, Puebla</p> 
+                            <p>Tel. 1234567890         correo: bar.mapachito@gmail.com</p>
+                        <p></p>
                     </div>
+                
                 </div>
             </main>
         </div>
     );
-}
+    }
