@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // URL base de la API para las citas
-const URL_BASE = "http://localhost:8080/citas";
+const URL_BASE = "http://localhost:8080/cita";
 
 class CitaService {
     // Obtener todas las citas
