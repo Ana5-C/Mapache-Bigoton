@@ -36,7 +36,7 @@ export const AgendarCitaComponent = () => {
             CitaService.create(cita)
                 .then((response) => {
                     console.log(response.data);
-                    navigate('/');
+                    navigate('/cita');
                 })
                 .catch((error) => {
                     console.log(error);
