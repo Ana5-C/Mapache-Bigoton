@@ -1,0 +1,118 @@
+/* PrincipalComponent */
+body {
+  background-color: #81c583;
+  /* Fondo verde */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.containerPrincipal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  color: rgba(117, 66, 8, 0.904);
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.img-container {
+  flex: 1;
+  background-image: url('mapache.png');
+  display: flex;
+  justify-content: center;
+}
+
+.img-container img {
+  width: 80%;
+  /* Ajusta el tamaño de la imagen */
+  border-radius: 20px;
+}
+
+.form-containerPrincipal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(117, 66, 8, 0.904);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgba(117, 66, 8, 0.904);
+  border: 2px solid rgba(117, 66, 8, 0.904);
+  padding: 10px 20px;
+  background-color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.register-btn,
+.inicio-sesion-btn {
+  background-color: #d4a017;
+  color: white;
+  padding: 10px 20px;
+  border: 3px solid black;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+header i {
+  font-size: 1em;
+  /* Disminuye el tamaño de la fuente */
+  font-weight: bold;
+  /* Mantiene el texto en negrita */
+  font-style: italic;
+  /* Mantiene el texto en cursiva */
+  margin-top: 20px;
+  /* Agrega margen superior para separación */
+  color: rgba(117, 66, 8, 0.904);
+  /* Color del texto */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
