@@ -5,6 +5,7 @@ import FootComponent from './components/FootComponent';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import RegistroComponent from './components/RegistroComponent';
 import CitasComponent from './components/CitasComponent';
+import CitaRegistradaComponent from './components/CitaRegistradaComponent';
 import PrincipalComponent from './components/PrincipalComponent';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path='/iniciosesion' element={<InicioSesionComponent />}></Route>
             <Route path='/registro' element={<RegistroComponent />}></Route>
             <Route path='/citas' element={<CitasComponent />}></Route>
+            <Route path='/cita' element={<CitaRegistradaComponent />}></Route>
             <Route path='/'element={<PrincipalComponent/>}></Route>
           </Routes>
         </div>

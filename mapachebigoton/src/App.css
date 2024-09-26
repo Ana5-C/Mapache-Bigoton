@@ -154,7 +154,6 @@ body {
   background-color: #81c583;
   border-radius: 30px;
   box-shadow: 0 0 10px #81c583;
-   /* Agrega display flex para que los elementos se ajusten horizontalmente */
   flex-wrap: wrap;
 }
 
@@ -269,7 +268,7 @@ nav ul li a {
 }
 
 .logoutCitas {
-  background-color: #333;
+  background-color: #dc3545;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -349,5 +348,28 @@ form {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+/*Citas Registradas*/
+.containerCitaR {
+  width: 900px; 
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #81c583;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #81c583;
+  flex-wrap: wrap;
+}
+.text-aling h2{
+  text-align: center;
+}
+.img-containerCitaR {
+  width: 300px; 
+  height: 400px; 
+  background-image: url('mapache.png');
+  background-size: cover;
+  background-position: center;
+  margin: 20px;
+  float: left;
 }
 

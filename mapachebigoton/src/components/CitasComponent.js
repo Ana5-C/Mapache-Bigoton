@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import CitaService from '../services/CitaService'; 
+import CitaService from '../services/CitaService';
 
 export const AgendarCitaComponent = () => {
-    const [descripcion, setDescripcion] = useState('Corte');
-    const [costo, setCosto] = useState('100'); 
+    const [descripcion, setDescripcion] = useState('Seleccione un servicio');
+    const [costo, setCosto] = useState('');
     const [nombre, setNombre] = useState('');
     const [telefono, setTelefono] = useState('');
     const [fecha, setFecha] = useState('');
-    const [hora, setHora] = useState('3:00');
+    const [hora, setHora] = useState('');
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 
     const costos = {
-        'Corte': '100',
-        'Tratamiento Facial': '150',
-        'Coloración': '200',
+        'Corte de cabello': '$100',
+        'Afeitado con navaja': '$100',
+        'Arreglo de barba y bigote': '$150',
+        'Tratamientos capilares': '$250',
+        'Tratamiento Facial': '$300',
+
     };
 
     const handleDescripcionChange = (e) => {
@@ -33,7 +36,7 @@ export const AgendarCitaComponent = () => {
             CitaService.create(cita)
                 .then((response) => {
                     console.log(response.data);
-                    navigate('/'); 
+                    navigate('/');
                 })
                 .catch((error) => {
                     console.log(error);
@@ -66,9 +69,12 @@ export const AgendarCitaComponent = () => {
                             <div className='form-groupCitas'>
                                 <label htmlFor='description'>Descripción:</label>
                                 <select id='description' value={descripcion} onChange={handleDescripcionChange}>
-                                    <option value='Corte'>Corte</option>
+                                    <option value='Seleccion'>Seleccione un servicio</option>
+                                    <option value='Corte de cabello'>Corte de cabello</option>
+                                    <option value='Afeitado con navaja'>Afeitado con navaja</option>
+                                    <option value='Arreglo de barba y bigote'>Arreglo de barba y bigote</option>
+                                    <option value='Tratamientos capilares'>Tratamientos capilares</option>
                                     <option value='Tratamiento Facial'>Tratamiento Facial</option>
-                                    <option value='Coloración'>Coloración</option>
                                 </select>
                             </div>
                             <div className='form-groupCitas'>
@@ -131,7 +137,7 @@ export const AgendarCitaComponent = () => {
                             </div>
                         )}
                         <button className='btn btn-success' onClick={createCita}>Guardar</button>
-                        &nbsp;&nbsp;
+                        &nbsp;&nbsp; 
                         <Link to='/' className='btn btn-danger'>Cancelar</Link>
                     </form>
                 </div>

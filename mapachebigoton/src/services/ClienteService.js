@@ -12,7 +12,6 @@ class ClienteService{
     findByID(idCliente){
         return axios.get(URL_BASE+'/'+idCliente);
     }
-
     update(idCliente, cliente){
         return axios.put(URL_BASE+'/'+idCliente,cliente);
         
