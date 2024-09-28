@@ -1,5 +1,6 @@
 import './App.css';
 import FootComponent from './components/FootComponent';
+import HeadComponent from './components/HeadComponent';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PrincipalComponent from './components/PrincipalComponent';
 import UbicacionComponent from './components/UbicacionComponent';

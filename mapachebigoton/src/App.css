@@ -1,118 +1,118 @@
-/* PrincipalComponent */
-body {
-  background-color: #81c583;
-  /* Fondo verde */
-  font-family: Arial, sans-serif;
+/* Estilo global para que el fondo cubra toda la página */
+body, html {
   margin: 0;
   padding: 0;
+  height: 100%;
+  background-color: #81c583; /* Fondo verde para toda la página */
 }
 
+/* Contenedor Principal */
 .containerPrincipal {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #81c583; /* Fondo verde del contenedor */
+  box-shadow: none; /* Quitar sombra */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  /* Centra horizontalmente */
-  align-items: center;
+/* Cabecera */
+h1 {
   width: 100%;
   text-align: center;
-  color: rgba(117, 66, 8, 0.904);
-  font-size: 4em;
-  font-weight: bold;
-  font-style: italic;
-  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px;
-}
 
+
+/* Contenedor de Contenido */
 .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 90%; /* Ajustar ancho para que no sobresalga */
 }
 
+/* Contenedor de Imagen */
 .img-container {
-  flex: 1;
-  background-image: url('mapache.png');
-  display: flex;
-  justify-content: center;
+  width: 450px; 
+  height: 500px; 
+  background-image: url('mapache.png'); /* Reemplazar con la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  margin: 20px;
+  border-radius: 15px;
 }
 
-.img-container img {
-  width: 80%;
-  /* Ajusta el tamaño de la imagen */
-  border-radius: 20px;
-}
-
+/* Contenedor de Formularios */
 .form-containerPrincipal {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: rgba(117, 66, 8, 0.904);
+  justify-content: center; 
+  margin-left: 30px;
+  max-width: 400px;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Contenedor de título y botones combinados */
+.title-buttons {
   display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Espacio entre el título y los botones */
 }
 
-nav ul li a {
-  text-decoration: none;
+.title {
+  font-size: 55px;
   color: rgba(117, 66, 8, 0.904);
-  border: 2px solid rgba(117, 66, 8, 0.904);
-  padding: 10px 20px;
-  background-color: white;
   font-weight: bold;
-  font-size: 1.2em;
+  font-style: italic;
 }
 
+/* Botones de Navegación */
+.buttons-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  background-color: white;
+  color: rgba(117, 66, 8, 0.904);
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: 2px solid rgba(117, 66, 8, 0.904);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background-color: rgba(117, 66, 8, 0.904);
+  color: white;
+}
+
+/* Botones de Acción */
 .buttons {
-  margin-top: 30px;
+  margin-top: 15px; /* Ajustar espacio entre botones */
   display: flex;
   gap: 20px;
 }
 
-.register-btn,
-.inicio-sesion-btn {
-  background-color: #d4a017;
+.register-btn, .inicio-sesion-btn {
+  background-color: #d4a017; 
   color: white;
   padding: 10px 20px;
-  border: 3px solid black;
+  border: 2px solid #8e6b23;
   font-size: 1.2em;
   cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-header i {
-  font-size: 1em;
-  /* Disminuye el tamaño de la fuente */
-  font-weight: bold;
-  /* Mantiene el texto en negrita */
-  font-style: italic;
-  /* Mantiene el texto en cursiva */
-  margin-top: 20px;
-  /* Agrega margen superior para separación */
-  color: rgba(117, 66, 8, 0.904);
-  /* Color del texto */
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.register-btn:hover, .inicio-sesion-btn:hover {
+  background-color: #b3842e;
 }
