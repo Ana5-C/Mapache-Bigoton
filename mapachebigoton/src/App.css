@@ -117,13 +117,108 @@ h1 {
   background-color: #b3842e;
 }
 
-
+/*---------------------------------------------------------------------------------------------------*/
 /*SERVICIOSCOMPONENT*/
+.containerServicios {
+  width: 100%;
+  height: auto; /* Ocupa la altura necesaria para mostrar el contenido */
+  background-color: #81c583; /* Fondo verde */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-around;
+  
+}
+
+/* Header: Logo, Navegación y Cerrar Sesión */
+.header-containerS {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: px;
+}
+
+.logo-containerS {
+  width: 200px; 
+  height: 200px; 
+  background-image: url('mapache.png'); /* Reemplazar con la ruta de tu imagen */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 15px;
+  border-radius: 15px;
+  
+}
+
+.nav-containerS {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  top: -10px;
+  right: 430px;
+}
+
+.nav-btnS {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid rgba(117, 66, 8, 0.904);
+  background-color: white;
+  font-weight: bold;
+  color: rgba(117, 66, 8, 0.904);
+  border-radius: 3px;
+  font-size: 1.3em;
+}
+
+.nav-btnS:hover {
+  background-color: #d4a017;
+
+}
+
+.close-btnS {
+  background-color: #ee8282;
+  color: white;
+  padding: 3px 20px;
+  border: 1px solid black;
+  font-size: 1.3em;
+  text-align: left;
+}
+.servicio {
+  display: inline-block; /* Muestra los servicios en una fila */
+  margin-right: 80px; /* Añade un margen derecho para separar los servicios */
+}
+.servicio-containerS {
+  width: 240px; 
+  height: 200px; 
+  background-image: url('mapache.png'); /* Reemplazar con la ruta de tu imagen */
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 20px;
+}
+/* Contenido Principal */
+.content-containerS {
+  text-align: left;
+  margin-bottom: 200px;
+}
+
+.titleS {
+  font-size: 45px;
+  font-style: italic;
+  color: rgba(117, 66, 8, 0.904);
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left;
+  position: relative;
+  top: -40px;
+  right: -40px;
+}
+
 
 
 /*---------------------------------------------------------------------------------------------------*/
 /*UBICACIONCOMPONENT*/
-/* Contenedor Principal */
 .containerUbicacion {
   width: 100%;
   height: 100px; /* Ocupa toda la altura de la pantalla */
@@ -152,7 +247,6 @@ h1 {
   background-position: center;
   margin: 15px;
   border-radius: 15px;
-  
 }
 
 .nav-containerU {
