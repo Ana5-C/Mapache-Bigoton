@@ -120,4 +120,108 @@ h1 {
 
 /*SERVICIOSCOMPONENT*/
 
+
+/*---------------------------------------------------------------------------------------------------*/
 /*UBICACIONCOMPONENT*/
+/* Contenedor Principal */
+.containerUbicacion {
+  width: 100%;
+  height: 100px; /* Ocupa toda la altura de la pantalla */
+  background-color: #81c583; /* Fondo verde */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Header: Logo, Navegación y Cerrar Sesión */
+.header-containerU {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: px;
+}
+
+.logo-containerU {
+  width: 240px; 
+  height: 240px; 
+  background-image: url('mapache.png'); /* Reemplazar con la ruta de tu imagen */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 15px;
+  border-radius: 15px;
+  
+}
+
+.nav-containerU {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  /* Posiciona el botón de manera absoluta */
+  top: 50px;
+  /* Ajusta la distancia desde la parte superior */
+  right: 430px;
+}
+
+.nav-btnU {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid rgba(117, 66, 8, 0.904);
+  background-color: white;
+  font-weight: bold;
+  color: rgba(117, 66, 8, 0.904);
+  border-radius: 3px;
+  font-size: 1.3em;
+}
+
+.nav-btn:hover {
+  background-color: #d4a017;
+
+}
+
+.close-btn {
+  background-color: #ee8282;
+  color: white;
+  padding: 3px 20px;
+  border: 1px solid black;
+  font-size: 1.3em;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: left;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+
+}
+
+/* Contenido Principal */
+.content-containerU {
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.titleU {
+  font-size: 50px;
+  font-style: italic;
+  color: rgba(117, 66, 8, 0.904);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.subtitleU {
+  font-size: 40px;
+  font-style: italic;
+  color: #2f4f4f;
+  margin-bottom: 20px;
+}
+
+.address, .contact {
+  font-size: 30px;
+  font-style: italic;
+  color: #2f4f4f;
+  margin: 5px 0;
+}
