@@ -152,124 +152,222 @@ body {
 }
 
 /* PrincipalComponent */
-body {
-  background-color: #81c583;
-  /* Fondo verde */
-  font-family: Arial, sans-serif;
+/* Estilo global para que el fondo cubra toda la página */
+body, html {
   margin: 0;
   padding: 0;
+  height: 100%;
+  background-color: #81c583; /* Fondo verde para toda la página */
 }
 
+/* Contenedor Principal */
 .containerPrincipal {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #81c583; /* Fondo verde del contenedor */
+  box-shadow: none; /* Quitar sombra */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  /* Centra horizontalmente */
-  align-items: center;
+/* Cabecera */
+h1 {
   width: 100%;
   text-align: center;
-  color: rgba(117, 66, 8, 0.904);
-  font-size: 4em;
-  font-weight: bold;
-  font-style: italic;
-  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px;
-}
 
+
+/* Contenedor de Contenido */
 .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 90%; /* Ajustar ancho para que no sobresalga */
 }
 
+/* Contenedor de Imagen */
 .img-container {
-  flex: 1;
-  background-image: url('mapache.png');
-  display: flex;
-  justify-content: center;
+  width: 450px; 
+  height: 500px; 
+  background-image: url('mapache.png'); /* Reemplazar con la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  margin: 20px;
+  border-radius: 15px;
 }
 
-.img-container img {
-  width: 80%;
-  /* Ajusta el tamaño de la imagen */
-  border-radius: 20px;
-}
-
+/* Contenedor de Formularios */
 .form-containerPrincipal {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: rgba(117, 66, 8, 0.904);
+  justify-content: center; 
+  margin-left: 30px;
+  max-width: 400px;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Contenedor de título y botones combinados */
+.title-buttons {
   display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Espacio entre el título y los botones */
 }
 
-nav ul li a {
-  text-decoration: none;
+.title {
+  font-size: 55px;
   color: rgba(117, 66, 8, 0.904);
-  border: 2px solid rgba(117, 66, 8, 0.904);
-  padding: 10px 20px;
-  background-color: white;
   font-weight: bold;
-  font-size: 1.2em;
+  font-style: italic;
 }
 
+/* Botones de Navegación */
+.buttons-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  background-color: white;
+  color: rgba(117, 66, 8, 0.904);
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: 2px solid rgba(117, 66, 8, 0.904);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background-color: rgba(117, 66, 8, 0.904);
+  color: white;
+}
+
+/* Botones de Acción */
 .buttons {
-  margin-top: 30px;
+  margin-top: 15px; /* Ajustar espacio entre botones */
   display: flex;
   gap: 20px;
 }
 
-.register-btn,
-.inicio-sesion-btn {
-  background-color: #d4a017;
+.register-btn, .inicio-sesion-btn {
+  background-color: #d4a017; 
   color: white;
   padding: 10px 20px;
-  border: 3px solid black;
+  border: 2px solid #8e6b23;
   font-size: 1.2em;
   cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-header i {
-  font-size: 1em;
-  /* Disminuye el tamaño de la fuente */
-  font-weight: bold;
-  /* Mantiene el texto en negrita */
-  font-style: italic;
-  /* Mantiene el texto en cursiva */
-  margin-top: 20px;
-  /* Agrega margen superior para separación */
-  color: rgba(117, 66, 8, 0.904);
-  /* Color del texto */
-  text-align: center;
+.register-btn:hover, .inicio-sesion-btn:hover {
+  background-color: #b3842e;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+/*SERVICIOSCOMPONENT*/
+.containerServicios {
+  width: 100%;
+  height: auto; /* Ocupa la altura necesaria para mostrar el contenido */
+  background-color: #81c583; /* Fondo verde */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-around;
+  
+}
+
+/* Header: Logo, Navegación y Cerrar Sesión */
+.header-containerS {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: px;
+}
+
+.logo-containerS {
+  width: 200px; 
+  height: 200px; 
+  background-image: url('mapache.png'); /* Reemplazar con la ruta de tu imagen */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 15px;
+  border-radius: 15px;
+  
+}
+
+.nav-containerS {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 15px;
+  position: relative;
+  top: -10px;
+  right: 430px;
 }
 
+.nav-btnS {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid rgba(117, 66, 8, 0.904);
+  background-color: white;
+  font-weight: bold;
+  color: rgba(117, 66, 8, 0.904);
+  border-radius: 3px;
+  font-size: 1.3em;
+}
+
+.nav-btnS:hover {
+  background-color: #d4a017;
+
+}
+
+.close-btnS {
+  background-color: #ee8282;
+  color: white;
+  padding: 3px 20px;
+  border: 1px solid black;
+  font-size: 1.3em;
+  text-align: left;
+}
+.servicio {
+  display: inline-block; /* Muestra los servicios en una fila */
+  margin-right: 80px; /* Añade un margen derecho para separar los servicios */
+}
+.servicio-containerS {
+  width: 240px; 
+  height: 200px; 
+  background-image: url('mapache.png'); /* Reemplazar con la ruta de tu imagen */
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 20px;
+}
+/* Contenido Principal */
+.content-containerS {
+  text-align: left;
+  margin-bottom: 200px;
+}
+
+.titleS {
+  font-size: 45px;
+  font-style: italic;
+  color: rgba(117, 66, 8, 0.904);
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left;
+  position: relative;
+  top: -40px;
+  right: -40px;
+}
 /*UbicacionComponent*/
 body {
   background-color: #81c583;
