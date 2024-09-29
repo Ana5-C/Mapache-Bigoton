@@ -187,12 +187,56 @@ h1 {
 }
 .servicio {
   display: inline-block; /* Muestra los servicios en una fila */
-  margin-right: 80px; /* Añade un margen derecho para separar los servicios */
+  margin-right: 100px; /* Añade un margen derecho para separar los servicios */
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+
 }
-.servicio-containerS {
+.servicio-container1 {
+  width: 200px; 
+  height: 200px; 
+  background-image: url('cortes.jpg');  /* Reemplazar con la ruta de tu imagen */
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 20px;
+}
+.servicio-container2 {
   width: 240px; 
   height: 200px; 
-  background-image: url('mapache.png'); /* Reemplazar con la ruta de tu imagen */
+  background-image: url('cortes.jpg');
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 20px;
+}
+.servicio-container3 {
+  width: 240px; 
+  height: 200px; 
+  background-image: url('mapache.png');
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 20px;
+}
+.servicio-container4 {
+  width: 240px; 
+  height: 200px; 
+  background-image: url('mapache.png');
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 20px;
+}
+.servicio-container5 {
+  width: 240px; 
+  height: 200px; 
+  background-image: url('mapache.png');
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 20px;
+}
+.servicio-container6 {
+  width: 240px; 
+  height: 200px; 
+  background-image: url('mapache.png');
   background-size: contain;
   background-position: center;
   margin-bottom: 20px;
