@@ -271,17 +271,15 @@ h1 {
   background-color: #b3842e;
 }
 
-/*---------------------------------------------------------------------------------------------------*/
 /*SERVICIOSCOMPONENT*/
 .containerServicios {
   width: 100%;
   height: auto; /* Ocupa la altura necesaria para mostrar el contenido */
   background-color: #81c583; /* Fondo verde */
   display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: space-around;
-  
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 /* Header: Logo, Navegación y Cerrar Sesión */
@@ -290,7 +288,6 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: px;
 }
 
 .logo-containerS {
@@ -317,7 +314,7 @@ h1 {
 
 .nav-btnS {
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 10px;
   border: 2px solid rgba(117, 66, 8, 0.904);
   background-color: white;
   font-weight: bold;
@@ -340,21 +337,89 @@ h1 {
   text-align: left;
 }
 .servicio {
-  display: inline-block; /* Muestra los servicios en una fila */
-  margin-right: 80px; /* Añade un margen derecho para separar los servicios */
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(2, 70, 66);
+  margin: 85px;
+
 }
-.servicio-containerS {
-  width: 240px; 
-  height: 200px; 
-  background-image: url('mapache.png'); /* Reemplazar con la ruta de tu imagen */
+.servicio-container1 {
+  width: 350px;
+  height: 200px;
+  background-image: url('cortes.jpg');  /* Reemplazar con la ruta de tu imagen */
   background-size: contain;
-  background-position: center;
-  margin-bottom: 20px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.servicio-container2 {
+  width: 256px; 
+  height: 200px;
+  background-image: url('afeitado.jpg');
+  background-size: contain;
+  margin: 10px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.servicio-container3 {
+  width: 170px; 
+  height: 200px;
+  background-image: url('barba.jpg');
+  background-size: contain;
+  margin: 10px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.servicio-container4 {
+  width: 300px; 
+  height: 200px; 
+  background-image: url('tratamientos.jpg');
+  background-size: contain;
+  margin: 10px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.servicio-container5 {
+  width: 300px; 
+  height: 200px; 
+  background-image: url('facial.jpg');
+  background-size: contain;
+  margin: 10px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.servicio-container6 {
+  width: 130px; 
+  height: 195px; 
+  background-image: url('corte_escolar.jpg');
+  background-size: contain;
+  margin: 10px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 /* Contenido Principal */
 .content-containerS {
   text-align: left;
-  margin-bottom: 200px;
 }
 
 .titleS {
@@ -362,264 +427,112 @@ h1 {
   font-style: italic;
   color: rgba(117, 66, 8, 0.904);
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: -100px;
   text-align: left;
   position: relative;
   top: -40px;
   right: -40px;
 }
-/*UbicacionComponent*/
-body {
-  background-color: #81c583;
-  /* Fondo verde */
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 
+
+
+/*---------------------------------------------------------------------------------------------------*/
+/*UBICACIONCOMPONENT*/
 .containerUbicacion {
+  width: 100%;
+  height: 100px; /* Ocupa toda la altura de la pantalla */
+  background-color: #81c583; /* Fondo verde */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px;
-  position: relative;
+  justify-content: space-around;
 }
 
-header {
+/* Header: Logo, Navegación y Cerrar Sesión */
+.header-containerU {
+  width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  text-align: center;
-  color: rgba(117, 66, 8, 0.904);
-  font-size: 4em;
-  font-weight: bold;
-  margin-top: 20px;
-  position: relative;
-  /* Necesario para la posición absoluta del logo */
+  margin-bottom: px;
 }
 
-.logo {
-  background-image: url('mapache.png');
-  width: 100px;
-  /* Ajusta el tamaño del logo */
-  position: fixed;
-  top: 10px;
-  left: 10px;
-
+.logo-containerU {
+  width: 240px; 
+  height: 240px; 
+  background-image: url('mapache.png'); /* Reemplazar con la ruta de tu imagen */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 15px;
+  border-radius: 15px;
 }
 
-i {
-  font-size: 3em;
-  /* Aumenta el tamaño de la fuente */
-  font-weight: bold;
-  /* Aplica negrita */
-  font-style: italic;
-  /* Aplica cursiva */
-  margin-top: 20px;
-  /* Agrega margen superior para separación */
-  color: rgba(117, 66, 8, 0.904);
-  /* Color del texto */
-}
-
-.logout-btn {
-  background-color: #d41717;
-  color: white;
-  padding: 3px 40px;
-  border: 2px solid black;
-  font-size: .60em;
-  cursor: pointer;
-  white-space: nowrap;
-  text-align: left;
-  position: fixed;
-  /* Posiciona el botón de manera absoluta */
-  top: 10px;
-  /* Ajusta la distancia desde la parte superior */
-  right: 10px;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.img-containerUbicacion {
-  flex: 1;
-  background-image: url('mapache.png');
+.nav-containerU {
   display: flex;
   justify-content: center;
-}
-
-.img-container img {
-  width: 40%;
-  /* Ajusta el tamaño de la imagen */
-  border-radius: 20px;
-}
-
-.form-containerUbicacion {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  color: rgba(117, 66, 8, 0.904);
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
   gap: 15px;
-  margin-bottom: 80px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: rgba(117, 66, 8, 0.904);
-  border: 2px solid rgba(117, 66, 8, 0.904);
-  padding: 10px 20px;
-  background-color: white;
-  font-weight: bold;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-.info {
-  margin-top: 40px;
-  text-align: center;
-  font-style: italic;
-  /* Cursiva */
-  font-weight: bold;
-  /* Negrita */
-  font-size: 1.5em;
-  color: #06434b;
-}
-
-.buttons {
-  margin-top: 30px;
-  display: flex;
-  gap: 20px;
-}
-
-/*ServiciosComponent*/
-body {
-  background-color: #81c583;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #81c583;
-  color: rgba(117, 66, 8, 0.904);
-  font-size: 2em;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 15px;
-  margin-bottom: 80px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: rgba(117, 66, 8, 0.904);
-  border: 2px solid rgba(117, 66, 8, 0.904);
-  padding: 5px 10px;
-  background-color: white;
-  font-weight: bold;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-/*nav ul li a.active {
-  background-color: #3b82f6;
-  color: white;
-}*/
-.cerrar-sesion-btn {
-  background-color: #d41717;
-  color: white;
-  padding: 3px 40px;
-  border: 2px solid black;
-  font-size: .60em;
-  cursor: pointer;
-  white-space: nowrap;
-  text-align: left;
-  position: fixed;
-  /* Posiciona el botón de manera absoluta */
-  top: 10px;
-  /* Ajusta la distancia desde la parte superior */
-  right: 10px;
-}
-
-main {
-  text-align: left;
-  padding: 15px;
-}
-
-main h2 {
-  color: rgba(117, 66, 8, 0.904);
-  font-size: 2.5em;
-  text-align: right;
-}
-
-.servicios {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.servicio {
-  background-color: white;
-  border: 2px solid #000;
-  padding: 10px;
-  width: 150px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: rgba(117, 66, 8, 0.904);
   position: relative;
-}
-
-.servicio img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.servicio p {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 5px;
-}
-
-.mapache {
-  position: absolute;
+  /* Posiciona el botón de manera absoluta */
   top: 50px;
-  left: 20px;
+  /* Ajusta la distancia desde la parte superior */
+  right: 430px;
+}
+
+.nav-btnU {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid rgba(117, 66, 8, 0.904);
+  background-color: white;
+  font-weight: bold;
+  color: rgba(117, 66, 8, 0.904);
+  border-radius: 3px;
+  font-size: 1.3em;
+}
+
+.nav-btn:hover {
+  background-color: #d4a017;
+
+}
+
+.close-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 70px;
+
+}
+
+/* Contenido Principal */
+.content-containerU {
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.titleU {
+  font-size: 50px;
+  font-style: italic;
+  color: rgba(117, 66, 8, 0.904);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.subtitleU {
+  font-size: 40px;
+  font-style: italic;
+  color: #2f4f4f;
+  margin-bottom: 20px;
+}
+
+.address, .contact {
+  font-size: 30px;
+  font-style: italic;
+  color: #2f4f4f;
+  margin: 5px 0;
 }
