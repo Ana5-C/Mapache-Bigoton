@@ -124,10 +124,9 @@ h1 {
   height: auto; /* Ocupa la altura necesaria para mostrar el contenido */
   background-color: #81c583; /* Fondo verde */
   display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: space-around;
-  
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 /* Header: Logo, Navegación y Cerrar Sesión */
@@ -136,7 +135,6 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: px;
 }
 
 .logo-containerS {
@@ -163,7 +161,7 @@ h1 {
 
 .nav-btnS {
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 10px;
   border: 2px solid rgba(117, 66, 8, 0.904);
   background-color: white;
   font-weight: bold;
@@ -186,65 +184,89 @@ h1 {
   text-align: left;
 }
 .servicio {
-  display: inline-block; /* Muestra los servicios en una fila */
-  margin-right: 100px; /* Añade un margen derecho para separar los servicios */
+  display: inline-block;
   text-align: center;
   font-weight: bold;
   font-style: italic;
+  color: rgb(2, 70, 66);
+  margin: 85px;
 
 }
 .servicio-container1 {
-  width: 200px; 
-  height: 200px; 
+  width: 350px;
+  height: 200px;
   background-image: url('cortes.jpg');  /* Reemplazar con la ruta de tu imagen */
   background-size: contain;
-  background-position: center;
-  margin-bottom: 20px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .servicio-container2 {
-  width: 240px; 
-  height: 200px; 
-  background-image: url('cortes.jpg');
+  width: 256px; 
+  height: 200px;
+  background-image: url('afeitado.jpg');
   background-size: contain;
-  background-position: center;
-  margin-bottom: 20px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .servicio-container3 {
-  width: 240px; 
-  height: 200px; 
-  background-image: url('mapache.png');
+  width: 170px; 
+  height: 200px;
+  background-image: url('barba.jpg');
   background-size: contain;
-  background-position: center;
-  margin-bottom: 20px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .servicio-container4 {
-  width: 240px; 
+  width: 300px; 
   height: 200px; 
-  background-image: url('mapache.png');
+  background-image: url('tratamientos.jpg');
   background-size: contain;
-  background-position: center;
-  margin-bottom: 20px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .servicio-container5 {
-  width: 240px; 
+  width: 300px; 
   height: 200px; 
-  background-image: url('mapache.png');
+  background-image: url('facial.jpg');
   background-size: contain;
-  background-position: center;
-  margin-bottom: 20px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .servicio-container6 {
-  width: 240px; 
-  height: 200px; 
-  background-image: url('mapache.png');
+  width: 130px; 
+  height: 195px; 
+  background-image: url('corte_escolar.jpg');
   background-size: contain;
-  background-position: center;
-  margin-bottom: 20px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 /* Contenido Principal */
 .content-containerS {
   text-align: left;
-  margin-bottom: 200px;
 }
 
 .titleS {
@@ -252,7 +274,7 @@ h1 {
   font-style: italic;
   color: rgba(117, 66, 8, 0.904);
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: -100px;
   text-align: left;
   position: relative;
   top: -40px;
