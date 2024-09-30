@@ -153,12 +153,6 @@ body {
 
 /* PrincipalComponent */
 /* Estilo global para que el fondo cubra toda la página */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: #81c583; /* Fondo verde para toda la página */
-}
 
 /* Contenedor Principal */
 .containerPrincipal {
