@@ -1,45 +1,81 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import CitaService from '../services/CitaService';
+import ServicioService from '../services/ServicioService';
+import BarberoService from '../services/BarberoService';
 
 export const AgendarCitaComponent = () => {
-    const [descripcion, setDescripcion] = useState('Seleccione un servicio');
+    const [descripicion, setDescripcion] = useState('');
+    const [barbero, setNombreBar] = useState('');
     const [costo, setCosto] = useState('');
     const [nombre, setNombre] = useState('');
     const [telefono, setTelefono] = useState('');
     const [fecha, setFecha] = useState('');
     const [hora, setHora] = useState('');
     const [error, setError] = useState(null);
+    const [servicios, setServicios] = useState([]);
+    const [servicioSeleccionado, setServicioSeleccionado] = useState(null);
+    const [barberos, setBarberos] = useState([]);
+    const [barberoSeleccionado, setBarberoSeleccionado] = useState(null);
     const navigate = useNavigate();
 
-    const costos = {
-        'Corte de cabello': '$100',
-        'Afeitado con navaja': '$100',
-        'Arreglo de barba y bigote': '$150',
-        'Tratamientos capilares': '$250',
-        'Tratamiento Facial': '$300',
+    useEffect(() => {
+        ServicioService.findAll()
+            .then(response => {
+                console.log('Servicios obtenidos:', response.data);
+                setServicios(response.data);
+            })
+            .catch(error => {
+                console.error('Error al obtener los servicios:', error);
+            });
+    }, []);
 
-    };
+    useEffect(() => {
+        BarberoService.findAll()
+            .then(response => {
+                console.log('Barberos obtenidos:', response.data);
+                setBarberos(response.data);
+            })
+            .catch(error => {
+                console.error('Error al obtener los barberos:', error);
+            });
+    }, []);
 
     const handleDescripcionChange = (e) => {
-        const nuevaDescripcion = e.target.value;
-        setDescripcion(nuevaDescripcion);
-        setCosto(costos[nuevaDescripcion]);
+        const servicioSeleccionado = e.target.value;
+        const servicio = servicios.find((s) => s.tiposervico === servicioSeleccionado);
+        setServicioSeleccionado(servicioSeleccionado);
+        setCosto(servicio ? servicio.precio : '');
+    };
+    const handleBarberoChange = (e) => {
+        const barberoSeleccionado = e.target.value;
+        setBarberoSeleccionado(barberoSeleccionado);
     };
 
     const createCita = (e) => {
         e.preventDefault();
-        if (!descripcion || !costo || !nombre || !telefono || !fecha || !hora) {
+        if (!servicioSeleccionado || !costo || !nombre || !telefono || !fecha || !hora || !barberoSeleccionado) {
             setError('Por favor, complete todos los campos obligatorios');
         } else {
-            const cita = { descripcion, costo, nombre, telefono, fecha, hora };
+            const cita = {
+                nombre,
+                telefono,
+                fecha,
+                hora,
+                servicio: {
+                    idServicio: servicioSeleccionado.idServicio
+                },
+                barbero: {
+                    idBarbero: barberoSeleccionado.idBarbero
+                }
+            };
             CitaService.create(cita)
                 .then((response) => {
                     console.log(response.data);
                     navigate('/cita');
                 })
                 .catch((error) => {
-                    console.log(error);
+                    console.error('Error al registrar la cita:', error);
                     setError('Error al registrar la cita');
                 });
         }
@@ -64,17 +100,17 @@ export const AgendarCitaComponent = () => {
                 <div className='image-containerCitas' />
                 <h1>Agendar cita</h1>
                 <div className='form-containerCitas'>
-                    <form>
+                    <form onSubmit={createCita}>
                         <div className='form-columnCitas'>
                             <div className='form-groupCitas'>
-                                <label htmlFor='description'>Descripción:</label>
-                                <select id='description' value={descripcion} onChange={handleDescripcionChange}>
+                                <label htmlFor='servicio'>Descripción:</label>
+                                <select id='servicio' value={servicioSeleccionado} onChange={handleDescripcionChange}>
                                     <option value='Seleccion'>Seleccione un servicio</option>
-                                    <option value='Corte de cabello'>Corte de cabello</option>
-                                    <option value='Afeitado con navaja'>Afeitado con navaja</option>
-                                    <option value='Arreglo de barba y bigote'>Arreglo de barba y bigote</option>
-                                    <option value='Tratamientos capilares'>Tratamientos capilares</option>
-                                    <option value='Tratamiento Facial'>Tratamiento Facial</option>
+                                    {servicios.map((servicio) => (
+                                        <option key={servicio.idServicio} value={servicio.tiposervico}>
+                                            {servicio.tiposervico}
+                                        </option>
+                                    ))}
                                 </select>
                             </div>
                             <div className='form-groupCitas'>
@@ -84,26 +120,35 @@ export const AgendarCitaComponent = () => {
                                     id='cost'
                                     placeholder='$'
                                     value={costo}
-                                    readOnly // Campo de solo lectura para evitar modificaciones manuales
+                                    readOnly
                                 />
                             </div>
-                        </div>
-                        <div className='form-groupCitas'>
                             <div className='form-groupCitas'>
-                                <label htmlFor='name'>Nombre:</label>
+                                <label htmlFor='barbero'>Barbero:</label>
+                                <select id='barbero' value={barberoSeleccionado} onChange={handleBarberoChange}>
+                                    <option value=''>Seleccione un barbero</option>
+                                    {barberos.map(barbero => (
+                                        <option key={barbero.idBarbero} value={barbero.nombre}>
+                                            {barbero.nombre}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className='form-groupCitas'>
+                                <label htmlFor='nombre'>Nombre:</label>
                                 <input
                                     type='text'
-                                    id='name'
+                                    id='nombre'
                                     value={nombre}
                                     onChange={(e) => setNombre(e.target.value)}
                                     required
                                 />
                             </div>
                             <div className='form-groupCitas'>
-                                <label htmlFor='phone'>Teléfono:</label>
+                                <label htmlFor='telefono'>Teléfono:</label>
                                 <input
                                     type='tel'
-                                    id='phone'
+                                    id='telefono'
                                     value={telefono}
                                     onChange={(e) => setTelefono(e.target.value)}
                                     required
@@ -112,9 +157,8 @@ export const AgendarCitaComponent = () => {
                             <div className='form-groupCitas'>
                                 <label htmlFor='date'>Fecha:</label>
                                 <input
-                                    type='text'
+                                    type='date'
                                     id='date'
-                                    placeholder='dd/mm/aa'
                                     value={fecha}
                                     onChange={(e) => setFecha(e.target.value)}
                                     required
@@ -123,7 +167,7 @@ export const AgendarCitaComponent = () => {
                             <div className='form-groupCitas'>
                                 <label htmlFor='time'>Hora:</label>
                                 <input
-                                    type='text'
+                                    type='time'
                                     id='time'
                                     value={hora}
                                     onChange={(e) => setHora(e.target.value)}
@@ -131,19 +175,17 @@ export const AgendarCitaComponent = () => {
                                 />
                             </div>
                         </div>
-                        {error && (
-                            <div className='alert alert-danger'>
-                                {error}
-                            </div>
-                        )}
-                        <button className='btn btn-success' onClick={createCita}>Guardar</button>
-                        &nbsp;&nbsp; 
-                        <Link to='/' className='btn btn-danger'>Cancelar</Link>
+                        {error && <div className='alert'>{error}</div>}
+                        <div className='btn-container'>
+                            <button type='submit' className='btncita btn-successCita'>Guardar</button>
+                            <Link to='/' className='btncita btn-dangerCita'>Cancelar</Link>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     );
 };
+
 
 export default AgendarCitaComponent;
