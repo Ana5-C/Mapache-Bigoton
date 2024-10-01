@@ -5,8 +5,8 @@ import ServicioService from '../services/ServicioService';
 import BarberoService from '../services/BarberoService';
 
 export const AgendarCitaComponent = () => {
-    const [descripicion, setDescripcion] = useState('');
-    const [barbero, setNombreBar] = useState('');
+    const [descripcion, setDescripcion] = useState('');
+    const [nombreBar, setNombreBar] = useState('');
     const [costo, setCosto] = useState('');
     const [nombre, setNombre] = useState('');
     const [telefono, setTelefono] = useState('');
@@ -44,12 +44,16 @@ export const AgendarCitaComponent = () => {
     const handleDescripcionChange = (e) => {
         const servicioSeleccionado = e.target.value;
         const servicio = servicios.find((s) => s.tiposervico === servicioSeleccionado);
+        setDescripcion(servicio.tiposervico);
         setServicioSeleccionado(servicioSeleccionado);
-        setCosto(servicio ? servicio.precio : '');
+        setCosto(servicio.precio);
     };
+
     const handleBarberoChange = (e) => {
         const barberoSeleccionado = e.target.value;
-        setBarberoSeleccionado(barberoSeleccionado);
+        setNombreBar(barberoSeleccionado);
+        const barbero = barberos.find((b) => b.nombre === barberoSeleccionado);
+        setBarberoSeleccionado(barbero.nombre);
     };
 
     const createCita = (e) => {
@@ -67,7 +71,10 @@ export const AgendarCitaComponent = () => {
                 },
                 barbero: {
                     idBarbero: barberoSeleccionado.idBarbero
-                }
+                },
+                costo: costo, // Include the costo field
+                descripcion: descripcion, // Include the descripcion field
+                nombreBar: nombreBar // Include the nombreBar field
             };
             CitaService.create(cita)
                 .then((response) => {
@@ -80,6 +87,10 @@ export const AgendarCitaComponent = () => {
                 });
         }
     };
+
+   /* const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    const minDate = yesterday.toISOString().split('T')[0];*/
 
     return (
         <div>
@@ -134,6 +145,8 @@ export const AgendarCitaComponent = () => {
                                     ))}
                                 </select>
                             </div>
+                        </div>
+                        <div className='form-columnCitas'>
                             <div className='form-groupCitas'>
                                 <label htmlFor='nombre'>Nombre:</label>
                                 <input
@@ -151,6 +164,7 @@ export const AgendarCitaComponent = () => {
                                     id='telefono'
                                     value={telefono}
                                     onChange={(e) => setTelefono(e.target.value)}
+                                    maxLength={10}
                                     required
                                 />
                             </div>
@@ -161,6 +175,8 @@ export const AgendarCitaComponent = () => {
                                     id='date'
                                     value={fecha}
                                     onChange={(e) => setFecha(e.target.value)}
+                                    //min={minDate}
+                                    min={new Date().toISOString().split('T')[0]}
                                     required
                                 />
                             </div>
@@ -182,8 +198,8 @@ export const AgendarCitaComponent = () => {
                         </div>
                     </form>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 

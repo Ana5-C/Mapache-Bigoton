@@ -152,88 +152,6 @@ body {
   cursor: pointer;
 }
 
-/* PrincipalComponent */
-.containerPrincipal {
-  width: 900px;
-  padding: 0px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #81c583;
-  border-radius: 30px;
-  box-shadow: 0 0 10px #81c583;
-  flex-wrap: wrap;
-}
-
-header {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-header i {
-  font-size: 80px;
-  font-weight: bold;
-}
-
-.img-container {
-  width: 300px;
-  height: 500px;
-  background-image: url('mapache.png');
-  background-size: cover;
-  background-position: center;
-  margin: 20px;
-  float: left;
-}
-
-.form-containerPrincipal {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: 200px;
-  /* Agrega un margen izquierdo para separar la imagen del formulario */
-  max-width: 400px;
-}
-
-nav {
-  margin-top: 20px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 15px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: rgba(117, 66, 8, 0.904);
-  border: 2px solid rgba(117, 66, 8, 0.904);
-  padding: 10px 20px;
-  background-color: white;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-.buttons {
-  margin-top: 30px;
-  display: flex;
-  gap: 20px;
-}
-
-.register-btn,
-.inicio-sesion-btn {
-  background-color: #d4a017;
-  color: white;
-  padding: 10px 20px;
-  border: 3px solid black;
-  font-size: 1.2em;
-  cursor: pointer;
-}
-
 /* Citas */
 .containerCitas {
   background-color: #81c583;
@@ -241,6 +159,7 @@ nav ul li a {
   border-radius: 30px;
   box-shadow: 0 0 10px #81c583;
   width: 900px;
+  position: relative;
 }
 
 .image-containerCitas {
@@ -249,15 +168,18 @@ nav ul li a {
   width: 200px;
   height: 200px;
   position: absolute;
-  top: 20px;
-  left: 90px;
+  top: 0px;
+  left: -150px;
+}
+.headerCitas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .nav-menuCitas {
-  padding: 90;
   flex: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   color: rgba(117, 66, 8, 0.904);
 
 }
@@ -272,8 +194,8 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: rgba(117, 66, 8, 0.904);
-  border: 2px solid rgba(117, 66, 8, 0.904);
+  color: rgba(0, 0, 0, 0.904);
+  border: 2px solid rgba(0, 0, 0, 0.904);
   padding: 10px 20px;
   background-color: rgb(255, 255, 255);
   font-weight: bold;
@@ -288,8 +210,8 @@ nav ul li a {
   font-size: 20px;
   cursor: pointer;
   position: absolute;
-  top: 10px;
-  right: 70px;
+  top: 30px;
+  right: -200px;
 }
 
 
@@ -303,14 +225,21 @@ h1 {
 form {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center; 
+}
+
+.form-containerCitas {
+  display: flex;
+  justify-content: space-between;
 }
 
 .form-columnCitas {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  max-width: 400px; 
+  width: 45%;
+  max-width: 100%; 
 }
 
 .form-groupCitas {
@@ -320,6 +249,7 @@ form {
 .form-groupCitas label {
   display: block;
   margin-bottom: 10px;
+  color: #000000;
 }
 
 .form-groupCitas input,
@@ -369,6 +299,7 @@ form {
 .btn-successCita {
   background-color: #28a745;
   color: white;
+  border: 2px solid rgba(0, 0, 0, 0.904);
 }
 
 .btn-successCita:hover {
@@ -380,6 +311,7 @@ form {
 .btn-dangerCita {
   background-color: #dc3545;
   color: white;
+  border: 2px solid rgba(0, 0, 0, 0.904);
 }
 
 .btn-dangerCita:hover {
@@ -391,26 +323,47 @@ form {
 
 /*Citas Registradas*/
 .containerCitaR {
-  width: 900px;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 10x rgba(20, 50, 182, 0.1);
   background-color: #81c583;
+  padding: 30px;
   border-radius: 30px;
   box-shadow: 0 0 10px #81c583;
-  flex-wrap: wrap;
-}
-
-.text-aling h2 {
-  text-align: center;
+  width: 900px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  
 }
 
 .img-containerCitaR {
-  width: 300px;
-  height: 400px;
   background-image: url('mapache.png');
-  background-size: cover;
-  background-position: center;
-  margin: 20px;
-  float: left;
+  background-size: contain;
+  width: 550px;
+  height: 550px;
+  position: absolute;
+  top: 30px;
+  left: -300px;
+  margin-right: 200px;
 }
+.form-containerCitaR {
+  padding: 80px;
+  width: 55%;
+}
+.text-alignR {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.logoutCitasR {
+  background-color: #dc3545;
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.904);
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: -210px;
+}
+
+
+
