@@ -150,15 +150,171 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+body {
+  background-color: #81c583;
+  color: rgba(117, 66, 8, 0.904);
 
-/* PrincipalComponent */
+}
+
+.container {
+  background-color: #81c583;
+  padding: 0px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #81c583;
+  width: 900px;
+  display: flex;
+}
+
+.image-container {
+  flex: 1;
+  background-image: url('mapache.png');
+  background-size: 140%;
+  background-position: center;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.form-container {
+  flex: 1;
+}
+
+.container h2 {
+  margin-bottom: 10px;
+  font-size: 60px;
+  text-align: center;
+}
+
+.card-body {
+  width: 120%;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.form-label {
+  width: 150px;
+  margin-right: 20px;
+  text-align: right;
+  color: black;
+}
+
+.form-control {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 48%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.login-link {
+  margin-top: 10px;
+  display: block;
+  color: rgba(117, 66, 8, 0.904);
+  text-decoration: underline;
+  text-align: center;
+}
+
+.is-invalid {
+  border-color: red;
+}
+
+/* ListaPersonasComponent */
+.containerInicio {
+  background-color: #81c583;
+  padding: 80px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #81c583;
+  width: 950px;
+  display: flex;
+}
+
+.im-container {
+  flex: 1;
+  background-image: url('mapache.png');
+  background-size: 100%;
+  background-position: right;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.form-containerInicio {
+  flex: 1;
+}
+
+.container h2 {
+  margin-bottom: 10px;
+  font-size: 65px;
+  text-align: left;
+}
+
+.card-bodyInicio {
+  width: 95%;
+}
+
+.form-groupInicio {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.form-labelInicio {
+  width: 150px;
+  margin-right: 20px;
+  text-align: right;
+  color: black;
+}
+
+.form-controlInicio {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 48%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* PrincipalComponent--------------------------------------------------------------------------------- */
 /* Estilo global para que el fondo cubra toda la página */
+body, html {
+  height: 100%;
+  background-color: #81c583; /* Fondo verde para toda la página */
+}
 
 /* Contenedor Principal */
 .containerPrincipal {
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 70px;
   border-radius: 10px;
   background-color: #81c583; /* Fondo verde del contenedor */
   box-shadow: none; /* Quitar sombra */
@@ -171,17 +327,14 @@ body {
 h1 {
   width: 100%;
   text-align: center;
-  margin-bottom: 40px;
 }
-
-
 
 /* Contenedor de Contenido */
 .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%; /* Ajustar ancho para que no sobresalga */
+  width: 95%; /* Ajustar ancho para que no sobresalga */
 }
 
 /* Contenedor de Imagen */
@@ -265,7 +418,7 @@ h1 {
   background-color: #b3842e;
 }
 
-/*SERVICIOSCOMPONENT*/
+/*SERVICIOSCOMPONENT-------------------------------------------------------------------------------------*/
 .containerServicios {
   width: 100%;
   height: auto; /* Ocupa la altura necesaria para mostrar el contenido */
@@ -273,7 +426,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 95px;
 }
 
 /* Header: Logo, Navegación y Cerrar Sesión */
@@ -285,15 +438,15 @@ h1 {
 }
 
 .logo-containerS {
-  width: 200px; 
-  height: 200px; 
+  width: 250px; 
+  height: 250px; 
   background-image: url('mapache.png'); /* Reemplazar con la ruta de tu imagen */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 15px;
-  border-radius: 15px;
-  
+  position: absolute;
+  top: -10px;
+  right: 1130px;
 }
 
 .nav-containerS {
@@ -302,8 +455,8 @@ h1 {
   align-items: center;
   gap: 15px;
   position: relative;
-  top: -10px;
-  right: 430px;
+  top: 10px;
+  right: -200px;
 }
 
 .nav-btnS {
@@ -319,32 +472,31 @@ h1 {
 
 .nav-btnS:hover {
   background-color: #d4a017;
-
 }
 
 .close-btnS {
   background-color: #ee8282;
   color: white;
-  padding: 3px 20px;
+  padding: 3px;
   border: 1px solid black;
   font-size: 1.3em;
   text-align: left;
 }
 .servicio {
+  height: 100px;
   display: inline-block;
   text-align: center;
   font-weight: bold;
   font-style: italic;
   color: rgb(2, 70, 66);
-  margin: 85px;
-
+  margin: 10px;/*no movet*/
 }
 .servicio-container1 {
   width: 350px;
   height: 200px;
   background-image: url('cortes.jpg');  /* Reemplazar con la ruta de tu imagen */
   background-size: contain;
-  margin: 10px;
+  margin: 5px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -356,7 +508,7 @@ h1 {
   height: 200px;
   background-image: url('afeitado.jpg');
   background-size: contain;
-  margin: 10px;
+  margin: 5px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -368,7 +520,7 @@ h1 {
   height: 200px;
   background-image: url('barba.jpg');
   background-size: contain;
-  margin: 10px;
+  margin: 5px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -380,7 +532,7 @@ h1 {
   height: 200px; 
   background-image: url('tratamientos.jpg');
   background-size: contain;
-  margin: 10px;
+  margin: 5px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -392,7 +544,7 @@ h1 {
   height: 200px; 
   background-image: url('facial.jpg');
   background-size: contain;
-  margin: 10px;
+  margin: 5px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -404,7 +556,7 @@ h1 {
   height: 195px; 
   background-image: url('corte_escolar.jpg');
   background-size: contain;
-  margin: 10px;
+  margin: 5px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -421,7 +573,7 @@ h1 {
   font-style: italic;
   color: rgba(117, 66, 8, 0.904);
   font-weight: bold;
-  margin-bottom: -100px;
+  margin-bottom: -40px;
   text-align: left;
   position: relative;
   top: -40px;
@@ -448,7 +600,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: px;
+  margin-bottom: 20px;
 }
 
 .logo-containerU {
@@ -456,10 +608,9 @@ h1 {
   height: 240px; 
   background-image: url('mapache.png'); /* Reemplazar con la ruta de tu imagen */
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: 15px;
-  border-radius: 15px;
+  position: absolute;
+  top: -10px;
+  right: 1130px;
 }
 
 .nav-containerU {
@@ -471,7 +622,7 @@ h1 {
   /* Posiciona el botón de manera absoluta */
   top: 50px;
   /* Ajusta la distancia desde la parte superior */
-  right: 430px;
+  right: -190px;
 }
 
 .nav-btnU {
@@ -506,7 +657,6 @@ h1 {
 /* Contenido Principal */
 .content-containerU {
   text-align: center;
-  margin-bottom: 200px;
 }
 
 .titleU {
@@ -514,19 +664,20 @@ h1 {
   font-style: italic;
   color: rgba(117, 66, 8, 0.904);
   font-weight: bold;
-  margin-bottom: 30px;
+  margin: 120px;
 }
 
 .subtitleU {
-  font-size: 40px;
+  font-size: 30px;
   font-style: italic;
   color: #2f4f4f;
-  margin-bottom: 20px;
+  margin: -80px;
 }
 
 .address, .contact {
   font-size: 30px;
   font-style: italic;
   color: #2f4f4f;
-  margin: 5px 0;
+  margin: 20px ;
 }
+
