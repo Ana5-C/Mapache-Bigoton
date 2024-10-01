@@ -47,7 +47,7 @@ export default function ServiciosComponent() {
                     </div>
                     <div class="servicio">
                         <div className='servicio-container6' />
-                        <p>Corte Escolar</p>
+                        <p>Corte Escolarr</p>
                         <p>Precio: $50.00</p>
                     </div>
                 </div>
