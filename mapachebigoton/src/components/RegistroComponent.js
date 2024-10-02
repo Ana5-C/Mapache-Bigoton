@@ -28,41 +28,41 @@ export const RegistroComponent = () => {
 
     return (
         <div>
-            <div className='container'>
-                <div className='image-container' />
-                <div className='form-container'>
+            <div className='containerC'>
+                <div className='image-containerC' />
+                <div className='form-containerC'>
                     <h2>Registrarse</h2>
-                    <div className='card-body'>
+                    <div className='card-bodyC'>
                         <form>
-                            <div className='form-group'>
-                                <label className='form-label'>Nombre</label>
+                            <div className='form-groupC'>
+                                <label className='form-labelC'>Nombre</label>
                                 <input
                                     type='text'
                                     placeholder='Ingrese el nombre'
                                     name='nombre'
-                                    className='form-control'
+                                    className='form-controlC'
                                     value={nombre}
                                     onChange={(e) => setNombre(e.target.value)}
                                 />
                             </div>
-                            <div className='form-group'>
-                                <label className='form-label'>Telefono</label>
+                            <div className='form-groupC'>
+                                <label className='form-labelC'>Telefono</label>
                                 <input
                                     type='text'
                                     placeholder='Ingrese su número de telefono'
                                     name='telefono'
-                                    className='form-control'
+                                    className='form-controlC'
                                     value={telefono}
                                     onChange={(e) => setTelefono(e.target.value)}
                                 />
                             </div>
-                            <div className='form-group'>
-                                <label className='form-label'>Nombre de usuario</label>
+                            <div className='form-groupC'>
+                                <label className='form-labelC'>Nombre de usuario</label>
                                 <input
                                     type='text'
                                     placeholder='Ingrese el nombre de usuario'
                                     name='nombreUsuario'
-                                    className='form-control'
+                                    className='form-controlC'
                                     value={nombreUsuario}
                                     onChange={(e) => setNombreUsuario(e.target.value)}
                                 />
@@ -73,7 +73,7 @@ export const RegistroComponent = () => {
                                     type='password'
                                     placeholder='Ingrese la contraseña'
                                     name='contraseña'
-                                    className='form-control'
+                                    className='form-controlC'
                                     value={contrasena}
                                     onChange={(e) => setContrasena(e.target.value)}
                                 />
@@ -83,11 +83,11 @@ export const RegistroComponent = () => {
                                     {error}
                                 </div>
                             )}
-                            <button className='btn btn-success' onClick={(e) => createCliente(e)}>Registrar</button>
+                            <button className='btnC btn-successC' onClick={(e) => createCliente(e)}>Registrar</button>
                             &nbsp;&nbsp;
-                            <Link to='/' className='btn btn-danger'>Cancelar</Link>
+                            <Link to='/' className='btnC btn-dangeC'>Cancelar</Link>
                         </form>
-                        <a href="/iniciosesion" class="login-link">¿Ya tienes una cuenta? Inicia Sesión</a>
+                        <a href="/iniciosesion" class="login-linkC">¿Ya tienes una cuenta? Inicia Sesión</a>
                     </div>
                 </div>
             </div>
