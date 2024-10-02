@@ -491,7 +491,7 @@ body {
 
 .btn-dangerC {
   background-color: #dc3545;
-  color: white;
+  color: white
 }
 
 .login-linkC {
@@ -721,3 +721,5 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/*-------------------------------------------------------------*/
