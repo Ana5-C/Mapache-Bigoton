@@ -72,9 +72,9 @@ export const AgendarCitaComponent = () => {
                 barbero: {
                     idBarbero: barberoSeleccionado.idBarbero
                 },
-                costo: costo, // Include the costo field
-                descripcion: descripcion, // Include the descripcion field
-                nombreBar: nombreBar // Include the nombreBar field
+                costo: costo, 
+                descripcion: descripcion, 
+                nombreBar: nombreBar 
             };
             CitaService.create(cita)
                 .then((response) => {

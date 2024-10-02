@@ -54,6 +54,7 @@ export const RegistroComponent = () => {
                                     className='form-control'
                                     value={telefono}
                                     onChange={(e) => setTelefono(e.target.value)}
+                                    maxLength={10}
                                 />
                             </div>
                             <div className='form-group'>

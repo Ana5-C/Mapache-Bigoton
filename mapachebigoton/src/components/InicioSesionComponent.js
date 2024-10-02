@@ -19,6 +19,8 @@ export default function LoginComponents() {
       } catch (error) {
         if (error.message === 'Bad Request') {
           setError('Faltan campos por llenar');
+        } else if (error.response && error.response.status === 400) {
+          setError('Usuario y/o contraseña incorrectos');
         } else {
           setError(error.message);
         }

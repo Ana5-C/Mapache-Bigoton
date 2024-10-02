@@ -102,7 +102,7 @@ body {
 .im-container {
   flex: 1;
   background-image: url('mapache.png');
-  background-size: 100%;
+  background-size: 110%;
   background-position: right;
   border-radius: 10px;
   margin-right: 5px;
