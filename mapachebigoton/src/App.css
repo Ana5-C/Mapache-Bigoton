@@ -422,7 +422,8 @@ body {
 
 }
 
-.containeC {
+/* Registro */
+.container {
   background-color: #81c583;
   padding: 0px;
   border-radius: 30px;
@@ -431,7 +432,7 @@ body {
   display: flex;
 }
 
-.image-containerC {
+.image-container {
   flex: 1;
   background-image: url('mapache.png');
   background-size: 140%;
@@ -440,34 +441,34 @@ body {
   margin-right: 20px;
 }
 
-.form-containerC {
+.form-container {
   flex: 1;
 }
 
-.containerC h2 {
+.container h2 {
   margin-bottom: 10px;
   font-size: 60px;
   text-align: center;
 }
 
-.card-bodyC {
+.card-body {
   width: 120%;
 }
 
-.form-groupC {
+.form-group {
   display: flex;
   align-items: center;
   margin: 10px 0;
 }
 
-.form-labelC {
+.form-label {
   width: 150px;
   margin-right: 20px;
   text-align: right;
   color: black;
 }
 
-.form-controlC {
+.form-control {
   width: 80%;
   padding: 10px;
   margin: 10px 0;
@@ -475,7 +476,7 @@ body {
   border-radius: 5px;
 }
 
-.btnC {
+.btn {
   width: 48%;
   padding: 10px;
   margin: 10px 0;
@@ -484,17 +485,17 @@ body {
   cursor: pointer;
 }
 
-.btn-successC {
+.btn-success {
   background-color: #28a745;
   color: white;
 }
 
-.btn-dangerC {
+.btn-danger {
   background-color: #dc3545;
-  color: white
+  color: white;
 }
 
-.login-linkC {
+.login-link {
   margin-top: 10px;
   display: block;
   color: rgba(117, 66, 8, 0.904);
@@ -502,12 +503,12 @@ body {
   text-align: center;
 }
 
-.is-invalidC {
+.is-invalid {
   border-color: red;
 }
 
-/* ListaPersonasComponent */
-.containerInicioC {
+/* Iniciar Sesión */
+.containerInicio {
   background-color: #81c583;
   padding: 80px;
   border-radius: 30px;
@@ -516,43 +517,43 @@ body {
   display: flex;
 }
 
-.im-containerC {
+.im-container {
   flex: 1;
   background-image: url('mapache.png');
-  background-size: 100%;
+  background-size: 110%;
   background-position: right;
   border-radius: 10px;
   margin-right: 5px;
 }
 
-.form-containerInicioC {
+.form-containerInicio {
   flex: 1;
 }
 
-.containerC h2 {
+.container h2 {
   margin-bottom: 10px;
   font-size: 65px;
   text-align: left;
 }
 
-.card-bodyInicioC {
+.card-bodyInicio {
   width: 95%;
 }
 
-.form-groupInicioC {
+.form-groupInicio {
   display: flex;
   align-items: center;
   margin: 20px 0;
 }
 
-.form-labelInicioC {
+.form-labelInicio {
   width: 150px;
   margin-right: 20px;
   text-align: right;
   color: black;
 }
 
-.form-controlInicioC {
+.form-controlInicio {
   width: 80%;
   padding: 10px;
   margin: 10px 0;
@@ -560,7 +561,7 @@ body {
   border-radius: 5px;
 }
 
-.btnC {
+.btn {
   width: 48%;
   padding: 10px;
   margin: 10px 0;
@@ -569,157 +570,215 @@ body {
   cursor: pointer;
 }
 
-body {
+/* Citas */
+.containerCitas {
   background-color: #81c583;
-  color: rgba(117, 66, 8, 0.904);
-
-}
-
-.containerC {
-  background-color: #81c583;
-  padding: 0px;
+  padding: 30px;
   border-radius: 30px;
   box-shadow: 0 0 10px #81c583;
   width: 900px;
-  display: flex;
+  position: relative;
 }
 
-.image-containerC {
-  flex: 1;
+.image-containerCitas {
   background-image: url('mapache.png');
-  background-size: 140%;
-  background-position: center;
-  border-radius: 10px;
-  margin-right: 20px;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0px;
+  left: -150px;
 }
-
-.form-containerC {
+.headerCitas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-menuCitas {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  color: rgba(117, 66, 8, 0.904);
+
 }
 
-.containerC h2 {
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.904);
+  border: 2px solid rgba(0, 0, 0, 0.904);
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.logoutCitas {
+  background-color: #dc3545;
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.904);
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: -200px;
+}
+
+
+h1 {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 70px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center; 
+}
+
+.form-containerCitas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-columnCitas {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  max-width: 100%; 
+}
+
+.form-groupCitas {
+  width: 50%;
+}
+
+.form-groupCitas label {
+  display: block;
   margin-bottom: 10px;
-  font-size: 60px;
+  color: #000000;
+}
+
+.form-groupCitas input,
+.form-groupCitas select {
+  width: 150%;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+
+.form-groupCitas input[id="cost"] {
+  height: 50px;
+  width: 70%;
+  padding: 12px;
+}
+
+.alert {
+  color: #be0e0e;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center; 
+  width: 100%;
+  margin-top: 1%;
+  padding: 10px;
+}
+
+.btncita {
+  width: 200px; 
+  padding: 10px;
+  margin: 0 20px; 
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
   text-align: center;
 }
 
-.card-bodyC {
-  width: 120%;
-}
-
-.form-groupC {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-}
-
-.form-labelC {
-  width: 150px;
-  margin-right: 20px;
-  text-align: right;
-  color: black;
-}
-
-.form-controlC {
-  width: 80%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.btnC {
-  width: 48%;
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-successC {
+.btn-successCita {
   background-color: #28a745;
   color: white;
+  border: 2px solid rgba(0, 0, 0, 0.904);
 }
 
-.btn-dangerC {
+.btn-successCita:hover {
+  background-color: #218838;
+  color: white; 
+  text-decoration: none; 
+}
+
+.btn-dangerCita {
   background-color: #dc3545;
   color: white;
+  border: 2px solid rgba(0, 0, 0, 0.904);
 }
 
-.login-linkC {
-  margin-top: 10px;
-  display: block;
-  color: rgba(117, 66, 8, 0.904);
-  text-decoration: underline;
-  text-align: center;
+.btn-dangerCita:hover {
+  background-color: #c82333; 
+  color: white;
+  text-decoration: none;
 }
 
-.is-invalidC {
-  border-color: red;
-}
 
-/* ListaPersonasComponent */
-.containerInicioC {
+/*Citas Registradas*/
+.containerCitaR {
   background-color: #81c583;
-  padding: 80px;
+  padding: 30px;
   border-radius: 30px;
   box-shadow: 0 0 10px #81c583;
-  width: 950px;
+  width: 900px;
+  position: relative;
   display: flex;
+  justify-content: center;
+  
 }
 
-.im-containerC {
-  flex: 1;
+.img-containerCitaR {
   background-image: url('mapache.png');
-  background-size: 100%;
-  background-position: right;
-  border-radius: 10px;
-  margin-right: 5px;
+  background-size: contain;
+  width: 550px;
+  height: 550px;
+  position: absolute;
+  top: 30px;
+  left: -300px;
+  margin-right: 200px;
+}
+.form-containerCitaR {
+  padding: 80px;
+  width: 55%;
+}
+.text-alignR {
+  text-align: center;
+  margin-top: 50px;
 }
 
-.form-containerInicioC {
-  flex: 1;
-}
-
-.containerC h2 {
-  margin-bottom: 10px;
-  font-size: 65px;
-  text-align: left;
-}
-
-.card-bodyInicioC {
-  width: 95%;
-}
-
-.form-groupInicioC {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.form-labelInicioC {
-  width: 150px;
-  margin-right: 20px;
-  text-align: right;
-  color: black;
-}
-
-.form-controlInicioC {
-  width: 80%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.btnC {
-  width: 48%;
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
+.logoutCitasR {
+  background-color: #dc3545;
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.904);
+  padding: 10px 20px;
+  font-size: 20px;
   cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: -210px;
 }
-
-/*-------------------------------------------------------------*/

@@ -19,6 +19,8 @@ export default function LoginComponents() {
       } catch (error) {
         if (error.message === 'Bad Request') {
           setError('Faltan campos por llenar');
+        } else if (error.response && error.response.status === 400) {
+          setError('Usuario y/o contraseña incorrectos');
         } else {
           setError(error.message);
         }
@@ -28,29 +30,29 @@ export default function LoginComponents() {
 
   return (
     <div>
-      <div className='containerInicioC'>
-        <div className='im-containerC' />
-        <div className='form-containerInicioC'>
+      <div className='containerInicio'>
+        <div className='im-container' />
+        <div className='form-containerInicio'>
           <h2>Iniciar Sesión</h2>
-          <div className='card-bodyInicioC'>
+          <div className='card-bodyInicio'>
             <form onSubmit={handleSubmit}>
-              <div className='form-groupInicioC'>
-                <label className='form-labelInicioC'>Nombre de usuario:</label>
+              <div className='form-groupInicio'>
+                <label className='form-labelInicio'>Nombre de usuario:</label>
                 <input
                   type='text'
                   placeholder='Ingrese el nombre de usuario'
                   name='nombreUsuario'
-                  className='form-controlInicioC'
+                  className='form-controlInicio'
                   value={nombreUsuario}
                   onChange={(e) => setNombreUsuario(e.target.value)} />
               </div>
-              <div className='form-groupInicioC'>
-                <label className='form-labelInicioC'>Contraseña:</label>
+              <div className='form-groupInicio'>
+                <label className='form-labelInicio'>Contraseña:</label>
                 <input
                   type='password'
                   placeholder='Ingrese la contraseña'
                   name='contrasena'
-                  className='form-controlInicioC'
+                  className='form-controlInicio'
                   value={contrasena}
                   onChange={(e) => setContrasena(e.target.value)} />
               </div>
@@ -63,11 +65,11 @@ export default function LoginComponents() {
                   {error}
                 </div>
               )}
-              <button className='btnC btn-successC'> Iniciar Sesión </button>
+              <button className='btn btn-success'> Iniciar Sesión </button>
               &nbsp;&nbsp;
-              <Link to='/' className='btnC btn-dangerC'>Cancelar</Link>
+              <Link to='/' className='btn btn-danger'>Cancelar</Link>
             </form>
-            <a href="/registro" class="login-linkC">¿No tienes una cuenta? Regístrate</a>
+            <a href="/registro" class="login-link">¿No tienes una cuenta? Regístrate</a>
           </div>
         </div>
       </div>
