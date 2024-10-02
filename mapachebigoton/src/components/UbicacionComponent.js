@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function UbicacionComponent() {
+  const navigate = useNavigate();
   return (
     <div className='containerUbicacion'>
       {/* Sección de Encabezado con el logo y barra de navegación */}
@@ -13,7 +14,7 @@ export default function UbicacionComponent() {
           <Link to="/citas" className='nav-btnU'>Citas</Link>
           <Link to="/ubicacion" className='nav-btn activeU'>Ubicación</Link>
         </nav>
-        <button className='close-btnU'><Link to="/">Cerrar Sesion</Link></button>
+        <button className='close-btnU'onClick={() => navigate('/')}>Cerrar Sesión</button>
       </header>
 
       {/* Contenido Principal */}
