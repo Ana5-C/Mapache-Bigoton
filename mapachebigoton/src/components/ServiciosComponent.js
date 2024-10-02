@@ -14,7 +14,7 @@ export default function ServiciosComponent() {
                     <Link to="/citas" className='nav-btnS'>Citas</Link>
                     <Link to="/ubicacion" className='nav-btnS'>Ubicación</Link>
                 </nav>
-                <button className='inicio-btn' onClick={() => navigate('/')}>Cerrar Sesión</button>
+                <button className='close-btnS' onClick={() => navigate('/')}>Cerrar Sesión</button>
             </header>
 
             {/* Contenido Principal */}

@@ -179,19 +179,27 @@ h1 {
   font-size: 1.3em;
 }
 
-.nav-btnS:hover {
+.nav-btn:hover {
   background-color: #d4a017;
 }
 
 .close-btnS {
-  background-color: hsl(0, 100%, 40%);
-  color: white;
-  padding: 3px;
-  font-size: 2px;
-  text-align: left;
-  position: absolute;
-  top: 90px;
-  right: 200px;
+  width: 200px; 
+  padding: 10px;
+  margin: 0 20px; 
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+  background-color: #dc3545;
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.904);
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .servicio {
@@ -479,6 +487,9 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
 }
 
 .btn-successRegistro {
@@ -489,6 +500,11 @@ body {
 .btn-dangerRegistro {
   background-color: #dc3545;
   color: white;
+}
+.btn-dangerRegistro:hover {
+  background-color: #c82333; 
+  color: white;
+  text-decoration: none;
 }
 
 .login-linkRegistro {
@@ -599,16 +615,17 @@ body {
   box-shadow: 0 0 10px #81c583;
   width: 900px;
   position: relative;
+  margin: auto;
 }
 
 .image-containerCitas {
   background-image: url('mapache.png');
   background-size: contain;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   position: absolute;
   top: 0px;
-  left: -150px;
+  left: -200px;
 }
 .headerCitas {
   display: flex;
@@ -620,7 +637,9 @@ body {
   display: flex;
   justify-content: center;
   color: rgba(117, 66, 8, 0.904);
-
+}
+.nav-btnCita:hover{
+  background-color: #d4a017;
 }
 
 nav ul {
@@ -633,8 +652,8 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.904);
-  border: 2px solid rgba(0, 0, 0, 0.904);
+  color: rgba(117, 66, 8, 0.904);
+  border: 2px solid rgba(117, 66, 8, 0.904);
   padding: 10px 20px;
   background-color: rgb(255, 255, 255);
   font-weight: bold;
@@ -644,6 +663,7 @@ nav ul li a {
 .logoutCitas {
   background-color: #dc3545;
   color: #fff;
+  border-radius: 7px;
   border: 2px solid rgba(0, 0, 0, 0.904);
   padding: 10px 20px;
   font-size: 20px;
@@ -658,7 +678,7 @@ h1 {
   padding: 10px;
   text-align: center;
   margin-bottom: 20px;
-  font-size: 70px;
+  font-size: 80px;
 }
 
 form {
@@ -768,9 +788,8 @@ form {
   box-shadow: 0 0 10px #81c583;
   width: 900px;
   position: relative;
-  display: flex;
   justify-content: center;
-  
+  margin: auto;
 }
 
 .img-containerCitaR {
@@ -780,16 +799,23 @@ form {
   height: 550px;
   position: absolute;
   top: 30px;
-  left: -300px;
+  left: -200px;
   margin-right: 200px;
 }
 .form-containerCitaR {
-  padding: 80px;
-  width: 55%;
+  padding: 90px 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%; 
+  justify-content: center; 
 }
-.text-alignR {
+h2 {
+  padding: 10px;
   text-align: center;
-  margin-top: 50px;
+  font-size: 80px;
 }
 
 .logoutCitasR {
@@ -802,6 +828,12 @@ form {
   position: absolute;
   top: 20px;
   right: -210px;
+  border-radius: 7px;
+}
+.logoutCitasR:hover {
+  background-color: #c82333; 
+  color: white;
+  text-decoration: none;
 }
 
 /*InicioComponent*/
@@ -904,16 +936,17 @@ h1 {
 }
 
 .inicio-btn{
-  background-color: #ee1919;
-  color: white;
+  background-color: #dc3545;
+  color: #fff;
+  margin: 0 20px;
+  border: none;
+  border-radius: 7px;
   padding: 10px 20px;
-  border: 3px solid #ff0000;
-  font-size: 25px;
+  font-size: 20px;
   cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.4s ease;
+  border: 2px solid rgba(0, 0, 0, 0.904);
 }
 
 .inicio-btn:hover {
-  background-color: #ee0c0c;
+  background-color: #c82333; 
 }

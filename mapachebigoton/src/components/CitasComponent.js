@@ -99,10 +99,10 @@ export const AgendarCitaComponent = () => {
                     <div className='nav-menuCitas'>
                         <nav>
                             <ul>
-                                <li><Link to="/inicio">Inicio</Link></li>
-                                <li><Link to="/servicios">Servicios</Link></li>
-                                <li><Link to="/citas">Citas</Link></li>
-                                <li><Link to="/ubicacion">Ubicación</Link></li>
+                                <li><Link to="/inicio" className='nav-btnCitas'>Inicio</Link></li>
+                                <li><Link to="/servicios" className='nav-btnCitas'>Servicios</Link></li>
+                                <li><Link to="/citas"className='nav-btnCita' >Citas</Link></li>
+                                <li><Link to="/ubicacion" className='nav-btnCitas'>Ubicación</Link></li>
                             </ul>
                         </nav>
                     </div>
