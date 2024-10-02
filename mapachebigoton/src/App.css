@@ -186,13 +186,12 @@ h1 {
 .close-btnS {
   background-color: hsl(0, 100%, 40%);
   color: white;
-  padding: 6px;
-  border: 1px solid black;
-  font-size: 1.3em;
+  padding: 3px;
+  font-size: 2px;
   text-align: left;
   position: absolute;
-  top: 80px;
-  right: 190px;
+  top: 90px;
+  right: 200px;
 }
 
 .servicio {
