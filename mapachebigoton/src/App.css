@@ -568,6 +568,31 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+}
+.btn-successInicioSesion {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-dangerInicioSesion {
+  background-color: #dc3545;
+  color: white;
+}
+.btn-dangerInicioSesion:hover {
+  background-color: #c82333; 
+  color: white;
+  text-decoration: none;
+}
+
+.login-linkInicioSesion {
+  margin-top: 10px;
+  display: block;
+  color: rgba(117, 66, 8, 0.904);
+  text-decoration: underline;
+  text-align: center;
 }
 
 /* Citas */
