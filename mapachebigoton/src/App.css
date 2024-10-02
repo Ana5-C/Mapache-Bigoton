@@ -70,7 +70,7 @@ h1 {
 }
 
 .title {
-  font-size: 55px;
+  font-size: 52px;
   color: rgba(117, 66, 8, 0.904);
   font-weight: bold;
   font-style: italic;
@@ -133,7 +133,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 95px;
+  gap: 100px;
 }
 
 /* Header: Logo, Navegación y Cerrar Sesión */
@@ -145,16 +145,14 @@ h1 {
 }
 
 .logo-containerS {
-  width: 250px;
-  height: 250px;
+  width: 240px;
+  height: 240px;
   background-image: url('mapache.png');
   /* Reemplazar con la ruta de tu imagen */
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   position: absolute;
-  top: -10px;
-  right: 1130px;
+  left: 20px;
+  top: 5px;
 }
 
 .nav-containerS {
@@ -163,8 +161,11 @@ h1 {
   align-items: center;
   gap: 15px;
   position: relative;
-  top: 10px;
-  right: -200px;
+  /* Posiciona el botón de manera absoluta */
+  top: 50px;
+  /* Ajusta la distancia desde la parte superior */
+  right: -300px;
+  margin: 50px;
 }
 
 .nav-btnS {
@@ -183,7 +184,7 @@ h1 {
 }
 
 .close-btnS {
-  background-color: hsl(0, 68%, 43%);
+  background-color: hsl(0, 100%, 40%);
   color: white;
   padding: 6px;
   border: 1px solid black;
@@ -201,22 +202,21 @@ h1 {
   font-weight: bold;
   font-style: italic;
   color: rgb(2, 70, 66);
-  margin: 10px;
-  /*no movet*/
+  margin: 52px;
 }
 
 .servicio-container1 {
   width: 350px;
   height: 200px;
   background-image: url('cortes.jpg');
-  /* Reemplazar con la ruta de tu imagen */
   background-size: contain;
-  margin: 5px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  top: -10px;
+  right: 60px;
 }
 
 .servicio-container2 {
@@ -224,12 +224,13 @@ h1 {
   height: 200px;
   background-image: url('afeitado.jpg');
   background-size: contain;
-  margin: 5px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  top: -10px;
+  right: 60px;
 }
 
 .servicio-container3 {
@@ -237,12 +238,13 @@ h1 {
   height: 200px;
   background-image: url('barba.jpg');
   background-size: contain;
-  margin: 5px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  top: -10px;
+  right: 60px;
 }
 
 .servicio-container4 {
@@ -250,7 +252,6 @@ h1 {
   height: 200px;
   background-image: url('tratamientos.jpg');
   background-size: contain;
-  margin: 5px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -263,7 +264,6 @@ h1 {
   height: 200px;
   background-image: url('facial.jpg');
   background-size: contain;
-  margin: 5px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -276,12 +276,13 @@ h1 {
   height: 195px;
   background-image: url('corte_escolar.jpg');
   background-size: contain;
-  margin: 5px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  top: -10px;
+  right: 60px;
 }
 
 /* Contenido Principal */
@@ -294,11 +295,11 @@ h1 {
   font-style: italic;
   color: rgba(117, 66, 8, 0.904);
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: -40px;
   text-align: left;
   position: relative;
-  top: -40px;
-  right: -40px;
+  top: -10px;
+  right: 60px;
 }
 
 
@@ -323,7 +324,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 }
 
 .logo-containerU {
@@ -388,7 +389,7 @@ h1 {
 /* Contenido Principal */
 .content-containerU {
   text-align: center;
-  margin-bottom: 200px;
+  margin-bottom:  100px;
 }
 
 .titleU {
