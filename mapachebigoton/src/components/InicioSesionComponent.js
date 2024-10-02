@@ -15,7 +15,7 @@ export default function LoginComponents() {
       try {
         const response = await ClienteService.login(nombreUsuario, contrasena);
         console.log(response);
-        window.location.href = '/';
+        window.location.href = '/inicio';
       } catch (error) {
         if (error.message === 'Bad Request') {
           setError('Faltan campos por llenar');

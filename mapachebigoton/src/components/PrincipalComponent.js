@@ -14,9 +14,9 @@ export default function MapacheBigotonComponent() {
                             <h1 className="title">Mapache Bigotón</h1>
                             <div className="buttons-nav">
                                 <Link to="/"><button className="nav-btn">Inicio</button></Link>
-                                <Link to="/servicios"><button className="nav-btn">Servicios</button></Link>
-                                <Link to="/citas"><button className="nav-btn">Citas</button></Link>
-                                <Link to="/ubicacion"><button className="nav-btn">Ubicación</button></Link>
+                                <Link to=""><button className="nav-btn">Servicios</button></Link>
+                                <Link to=""><button className="nav-btn">Citas</button></Link>
+                                <Link to=""><button className="nav-btn">Ubicación</button></Link>
                             </div>
                             <div className="buttons">
                                 <Link to="/registro"><button className="register-btn">Registrarse</button></Link>

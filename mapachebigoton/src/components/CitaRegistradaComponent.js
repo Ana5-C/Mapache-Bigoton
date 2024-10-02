@@ -12,7 +12,7 @@ export default function MapacheBigotonComponent() {
             <div className='form-containerCitaR'>
                 <nav>
                     <ul>
-                        <li><Link to="/">Inicio</Link></li>
+                        <li><Link to="/inicio">Inicio</Link></li>
                         <li><Link to="/servicios">Servicios</Link></li>
                         <li><Link to="/citas">Citas</Link></li>
                         <li><Link to="/ubicacion">Ubicación</Link></li>

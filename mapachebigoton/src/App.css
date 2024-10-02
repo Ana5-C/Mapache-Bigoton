@@ -372,9 +372,12 @@ h1 {
   justify-content: center;
   text-align: center;
   background-color: #dc3545;
+  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.904);
 }
 
 .close-btnU:hover {
+  background-color: #c82333; 
   color: white;
   text-decoration: none;
 }

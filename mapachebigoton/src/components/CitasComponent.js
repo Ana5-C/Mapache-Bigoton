@@ -99,7 +99,7 @@ export const AgendarCitaComponent = () => {
                     <div className='nav-menuCitas'>
                         <nav>
                             <ul>
-                                <li><Link to="/">Inicio</Link></li>
+                                <li><Link to="/inicio">Inicio</Link></li>
                                 <li><Link to="/servicios">Servicios</Link></li>
                                 <li><Link to="/citas">Citas</Link></li>
                                 <li><Link to="/ubicacion">Ubicación</Link></li>
@@ -194,7 +194,7 @@ export const AgendarCitaComponent = () => {
                         {error && <div className='alert'>{error}</div>}
                         <div className='btn-containerCitas'>
                             <button type='submit' className='btncita btn-successCita'>Guardar</button>
-                            <Link to='/' className='btncita btn-dangerCita'>Cancelar</Link>
+                            <Link to='/inicio' className='btncita btn-dangerCita'>Cancelar</Link>
                         </div>
                     </form>
                 </div>

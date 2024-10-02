@@ -8,7 +8,7 @@ export default function ServiciosComponent() {
             <header className='header-containerS'>
                 <div className='logo-containerS' />
                 <nav className='nav-containerS'>
-                    <Link to="/" className='nav-btnS'>Inicio</Link>
+                    <Link to="/inicio" className='nav-btnS'>Inicio</Link>
                     <Link to="/servicios" className='nav-btn activeS'>Servicios</Link>
                     <Link to="/citas" className='nav-btnS'>Citas</Link>
                     <Link to="/ubicacion" className='nav-btnS'>Ubicación</Link>

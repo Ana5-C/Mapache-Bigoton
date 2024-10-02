@@ -9,7 +9,7 @@ export default function UbicacionComponent() {
       <header className='header-containerU'>
       <div className='logo-containerU'/>
         <nav className='nav-containerU'>
-          <Link to="/" className='nav-btnU'>Inicio</Link>
+          <Link to="/inicio" className='nav-btnU'>Inicio</Link>
           <Link to="/servicios" className='nav-btnU'>Servicios</Link>
           <Link to="/citas" className='nav-btnU'>Citas</Link>
           <Link to="/ubicacion" className='nav-btn activeU'>Ubicación</Link>
