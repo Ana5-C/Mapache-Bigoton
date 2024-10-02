@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function ServiciosComponent() {
+    const navigate = useNavigate();
     return (
         <div className='containerServicios'>
             {/* Sección de Encabezado con el logo y barra de navegación */}
@@ -13,7 +14,7 @@ export default function ServiciosComponent() {
                     <Link to="/citas" className='nav-btnS'>Citas</Link>
                     <Link to="/ubicacion" className='nav-btnS'>Ubicación</Link>
                 </nav>
-                <button className='close-btn'><Link to="/">Cerrar Sesion</Link></button>
+                <button className='inicio-btn' onClick={() => navigate('/')}>Cerrar Sesión</button>
             </header>
 
             {/* Contenido Principal */}
