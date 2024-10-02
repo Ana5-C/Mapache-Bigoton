@@ -7,7 +7,6 @@ export default function MapacheBigotonComponent() {
             <main>
                 <div className='content'>
                     <div className='img-container'>
-                        <img url="mapache.png" alt="Mapache Bigotón" />
                     </div>
                     <div className='form-containerPrincipal'>
                         {/* Sección combinada con el título y los botones */}

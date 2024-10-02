@@ -192,7 +192,7 @@ export const AgendarCitaComponent = () => {
                             </div>
                         </div>
                         {error && <div className='alert'>{error}</div>}
-                        <div className='btn-container'>
+                        <div className='btn-containerCitas'>
                             <button type='submit' className='btncita btn-successCita'>Guardar</button>
                             <Link to='/' className='btncita btn-dangerCita'>Cancelar</Link>
                         </div>

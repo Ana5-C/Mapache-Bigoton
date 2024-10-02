@@ -423,7 +423,7 @@ body {
 }
 
 /* Registro */
-.container {
+.containerRegistro {
   background-color: #81c583;
   padding: 0px;
   border-radius: 30px;
@@ -432,7 +432,7 @@ body {
   display: flex;
 }
 
-.image-container {
+.image-containerRegistro {
   flex: 1;
   background-image: url('mapache.png');
   background-size: 140%;
@@ -441,34 +441,34 @@ body {
   margin-right: 20px;
 }
 
-.form-container {
+.form-containerRegistro {
   flex: 1;
 }
 
-.container h2 {
+.containerRegistro h2 {
   margin-bottom: 10px;
   font-size: 60px;
   text-align: center;
 }
 
-.card-body {
+.card-bodyRegistro {
   width: 120%;
 }
 
-.form-group {
+.form-groupRegistro {
   display: flex;
   align-items: center;
   margin: 10px 0;
 }
 
-.form-label {
+.form-labelRegistro {
   width: 150px;
   margin-right: 20px;
   text-align: right;
   color: black;
 }
 
-.form-control {
+.form-controlRegistro {
   width: 80%;
   padding: 10px;
   margin: 10px 0;
@@ -476,7 +476,7 @@ body {
   border-radius: 5px;
 }
 
-.btn {
+.btnRegistro {
   width: 48%;
   padding: 10px;
   margin: 10px 0;
@@ -485,17 +485,17 @@ body {
   cursor: pointer;
 }
 
-.btn-success {
+.btn-successRegistro {
   background-color: #28a745;
   color: white;
 }
 
-.btn-danger {
+.btn-dangerRegistro {
   background-color: #dc3545;
   color: white;
 }
 
-.login-link {
+.login-linkRegistro {
   margin-top: 10px;
   display: block;
   color: rgba(117, 66, 8, 0.904);
@@ -508,7 +508,7 @@ body {
 }
 
 /* Iniciar Sesión */
-.containerInicio {
+.containerInicioSesion {
   background-color: #81c583;
   padding: 80px;
   border-radius: 30px;
@@ -517,7 +517,7 @@ body {
   display: flex;
 }
 
-.im-container {
+.im-containerInicioSesion {
   flex: 1;
   background-image: url('mapache.png');
   background-size: 110%;
@@ -526,34 +526,34 @@ body {
   margin-right: 5px;
 }
 
-.form-containerInicio {
+.form-containerInicioSesion {
   flex: 1;
 }
 
-.container h2 {
+.containerInicioSesion h2 {
   margin-bottom: 10px;
   font-size: 65px;
   text-align: left;
 }
 
-.card-bodyInicio {
+.card-bodyInicioSesion {
   width: 95%;
 }
 
-.form-groupInicio {
+.form-groupInicioSesion {
   display: flex;
   align-items: center;
   margin: 20px 0;
 }
 
-.form-labelInicio {
+.form-labelInicioSesion {
   width: 150px;
   margin-right: 20px;
   text-align: right;
   color: black;
 }
 
-.form-controlInicio {
+.form-controlInicioSesion {
   width: 80%;
   padding: 10px;
   margin: 10px 0;
@@ -561,7 +561,7 @@ body {
   border-radius: 5px;
 }
 
-.btn {
+.btnInicioSesion {
   width: 48%;
   padding: 10px;
   margin: 10px 0;
@@ -693,7 +693,7 @@ form {
   margin-bottom: 20px;
 }
 
-.btn-container {
+.btn-containerCitas {
   display: flex;
   justify-content: center; 
   width: 100%;

@@ -30,29 +30,29 @@ export default function LoginComponents() {
 
   return (
     <div>
-      <div className='containerInicio'>
-        <div className='im-container' />
-        <div className='form-containerInicio'>
+      <div className='containerInicioSesion'>
+        <div className='im-containerInicioSesion' />
+        <div className='form-containerInicioSesion'>
           <h2>Iniciar Sesión</h2>
-          <div className='card-bodyInicio'>
+          <div className='card-bodyInicioSesion'>
             <form onSubmit={handleSubmit}>
-              <div className='form-groupInicio'>
-                <label className='form-labelInicio'>Nombre de usuario:</label>
+              <div className='form-groupInicioSesion'>
+                <label className='form-labelInicioSesion'>Nombre de usuario:</label>
                 <input
                   type='text'
                   placeholder='Ingrese el nombre de usuario'
                   name='nombreUsuario'
-                  className='form-controlInicio'
+                  className='form-controlInicioSesion'
                   value={nombreUsuario}
                   onChange={(e) => setNombreUsuario(e.target.value)} />
               </div>
-              <div className='form-groupInicio'>
-                <label className='form-labelInicio'>Contraseña:</label>
+              <div className='form-groupInicioSesion'>
+                <label className='form-labelInicioSesion'>Contraseña:</label>
                 <input
                   type='password'
                   placeholder='Ingrese la contraseña'
                   name='contrasena'
-                  className='form-controlInicio'
+                  className='form-controlInicioSesion'
                   value={contrasena}
                   onChange={(e) => setContrasena(e.target.value)} />
               </div>
@@ -65,11 +65,11 @@ export default function LoginComponents() {
                   {error}
                 </div>
               )}
-              <button className='btn btn-success'> Iniciar Sesión </button>
+              <button className='btnInicioSesion btn-successInicioSesion'> Iniciar Sesión </button>
               &nbsp;&nbsp;
-              <Link to='/' className='btn btn-danger'>Cancelar</Link>
+              <Link to='/' className='btnInicioSesion btn-dangerInicioSesion'>Cancelar</Link>
             </form>
-            <a href="/registro" class="login-link">¿No tienes una cuenta? Regístrate</a>
+            <a href="/registro" class="login-linkInicioSesion">¿No tienes una cuenta? Regístrate</a>
           </div>
         </div>
       </div>
