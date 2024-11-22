@@ -14,7 +14,7 @@ export default function InicioComponent() {
                         <div className="title-buttonsI">
                             <h1 className="titleI">Mapache Bigotón</h1>
                             <div className="buttons-navI">
-                                <Link to="/"><button className="nav-btnI">Inicio</button></Link>
+                                <Link to="/inicio"><button className="nav-btnI">Inicio</button></Link>
                                 <Link to="/servicios"><button className="nav-btnI">Servicios</button></Link>
                                 <Link to="/citas"><button className="nav-btnI">Citas</button></Link>
                                 <Link to="/ubicacion"><button className="nav-btnI">Ubicación</button></Link>

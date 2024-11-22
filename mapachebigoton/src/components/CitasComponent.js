@@ -29,7 +29,6 @@ export const AgendarCitaComponent = () => {
                 console.error('Error al obtener los servicios:', error);
             });
     }, []);
-
     useEffect(() => {
         BarberoService.findAll()
             .then(response => {
@@ -40,7 +39,6 @@ export const AgendarCitaComponent = () => {
                 console.error('Error al obtener los barberos:', error);
             });
     }, []);
-
     const handleDescripcionChange = (e) => {
         const servicioSeleccionado = e.target.value;
         const servicio = servicios.find((s) => s.tiposervico === servicioSeleccionado);
@@ -48,7 +46,6 @@ export const AgendarCitaComponent = () => {
         setServicioSeleccionado(servicioSeleccionado);
         setCosto(servicio.precio);
     };
-
     const handleBarberoChange = (e) => {
         const barberoSeleccionado = e.target.value;
         setNombreBar(barberoSeleccionado);

@@ -27,7 +27,7 @@ export default function LoginComponents() {
       }
     }
   }
-
+  
   return (
     <div>
       <div className='containerInicioSesion'>
